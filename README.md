@@ -14,7 +14,7 @@ Different clean states can produce exactly the same training density matrix. Thi
 
 ## The exact prediction limit
 
-Write $`\eta=1-a`$. The known-clean-state optimum is $`R_\star=1/(2d)`$. For $`1/d<a\le1`$, define $`q_d(a)`$ as the unique root on $`[0,1-1/d]`$ of
+Write $`\eta=1-a`$. The known-clean-state optimum is $`R_\star=1/(2d)`$. For $`1/d \lt a\le1`$, define $`q_d(a)`$ as the unique root on $`[0,1-1/d]`$ of
 
 ```math
 \sqrt{1-q}+\frac{\lfloor dq\rfloor}{\sqrt d}
@@ -31,9 +31,9 @@ If $`a\le1/d`$, it is $`1/2`$. The limit is taken with dimension and clean fract
 
 | Consequence | Precise content | Scientific account |
 |---|---|---|
-| Uniform small-contamination law | For $`0<\eta\le1/4`$, excess risk is $`\Theta(\min\{\eta^2,\eta/\sqrt d\})`$. | [Exact limit and scaling](science/precision_floor.md) |
+| Uniform small-contamination law | For $`0 \lt \eta\le1/4`$, excess risk is $`\Theta(\min\{\eta^2,\eta/\sqrt d\})`$. | [Exact limit and scaling](science/precision_floor.md) |
 | Recognition versus reconstruction | At each fixed $`a\in(0,1)`$, recognition risk tends to zero as $`d^{-1/2}`$ while worst-case clean-state reconstruction has a nonzero ambiguity. | [Meaning and limits](science/interpretation.md) |
-| Commuting contamination | Under $`[\sigma,P]=0`$, the exact limiting risk is $`\min\{d,\lfloor1/a\rfloor\}/(2d)`$; it equals the oracle risk when $`a>1/2`$. | [Same-interface comparison](science/commuting_comparison.md) |
+| Commuting contamination | Under $`[\sigma,P]=0`$, the exact limiting risk is $`\min\{d,\lfloor1/a\rfloor\}/(2d)`$; it equals the oracle risk when $`a \gt 1/2`$. | [Same-interface comparison](science/commuting_comparison.md) |
 | Explicit finite-copy decisions | A gap-free spectral filter gives sufficient copy budgets, with controlled simulation and synthesis error included. | [F1–F3 and proofs](science/finite_copy.md) |
 | Complete resource charges | Source preparation, all offline samples, total and active width, known gates and the single output are counted. | [Resource account](science/resources.md) |
 
@@ -44,6 +44,17 @@ Vanishing absolute excess does not imply matching the oracle's relative accuracy
 Start with the [model and information access](science/model.md), then follow the [exact precision proof](science/precision_floor.md) and [commuting comparison](science/commuting_comparison.md). The [finite-copy construction](science/finite_copy.md) implements a decision using retained training specimens; [resources](science/resources.md) states what it costs. The [interpretation](science/interpretation.md) joins the results and explains their limitations. [llms.txt](llms.txt) maps the authoritative statements for automated readers.
 
 The exact scalar Rényi-entropy/variation extremal is inherited from Rioul. Ensemble nonuniqueness, minimax theory, sample-based Hamiltonian simulation and clean quantum-reference advantages are established ingredients. The contribution here is their operational connection to the solved contaminated-training prediction limit and its noncommuting-source consequence. [Related work](references/related_work.md) and [bibliography](references/references.bib) identify the dependencies and nearby tasks.
+
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**, using the author's standard-layout manuscript. The learning route connects selected textbook foundations to the exact prediction limit and the separate achievable finite-copy bounds.
+
+| To understand | Read |
+|---|---|
+| How the learning materials fit together | [Learning overview](learning/README.md) |
+| One complete qubit experiment and its generalization | [Worked tutorial](learning/TUTORIAL.md) |
+| Relevant textbook locations, notation, and the missing steps | [Watrous bridge](learning/WATROUS_BRIDGE.md) |
+| The complete project's conceptual dependencies | [30-milestone map](learning/MILESTONES.md), with 12 background and 18 narrative milestones |
 
 ## Reproduce the finite checks
 

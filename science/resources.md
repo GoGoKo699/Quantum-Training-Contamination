@@ -26,7 +26,7 @@ When $`d`$ is not a power of two, use a known $`d`$-dimensional subspace of the 
 
 ## A finite circuit over known gates
 
-Write $`S=\operatorname{SWAP}_{AB}`$. Since $`S^2=I`$, a partial swap is
+Write $`S=\mathrm{SWAP}_{AB}`$. Since $`S^2=I`$, a partial swap is
 
 ```math
 e^{-ihS}=\cos(h)I-i\sin(h)S.
@@ -42,9 +42,10 @@ with two known controlled swaps and a controlled single-qubit rotation. A swap b
 
 One phase-estimation round also uses an inverse Fourier transform on $`m`$ qubits. A direct circuit uses $`O(m^2)`$ elementary known gates. Classical comparisons and a median of $`r`$ numbers of $`m`$ bits have a finite polynomial cost in $`r,m`$. The ideal-rotation gate count is therefore
 
+**Equation (R1).**
+
 ```math
 M=O(Nn+rm^2).
-\tag{R1}
 ```
 
 This is the usual circuit model with arbitrary pairs of registers available for known two-qubit gates. A hardware connectivity constraint would require adding its routing gates. No local-depth or hardware-wall-time optimum is asserted.
@@ -53,12 +54,13 @@ This is the usual circuit model with arbitrary pairs of registers available for 
 
 Every required angle is computable from $`t,\gamma`$ and the integer copy allocation in F1a. Approximate the ideal single-qubit rotations by a finite universal gate set, retaining exact known controlled-swap decompositions. If every synthesized elementary rotation has operator-norm error at most $`\xi_{\rm gate}/(2M)`$, a circuit hybrid bounds the resulting unhalved diamond error by $`\xi_{\rm gate}`$. One may use the constructive [Solovay–Kitaev compiler of Dawson and Nielsen](https://arxiv.org/abs/quant-ph/0505030v2), whose gate-count overhead is $`O(\log^{3.97}(M/\xi_{\rm gate}))`$ per rotation. This gives the conservative finite gate-set bound
 
+**Equation (R2).**
+
 ```math
 G_{\rm proc}
 =O\!\left[
 (Nn+rm^2)\log^{3.97}\!\left(\frac{Nn+rm^2}{\xi_{\rm gate}}\right)
 \right].
-\tag{R2}
 ```
 
 The compiler is inherited; more efficient rotation-synthesis methods can improve this overhead. F1 includes its error in the same prediction-risk budget as simulation error. The result does not assume exact implementation of arbitrary real rotation angles by a finite gate alphabet.
@@ -67,10 +69,11 @@ The compiler is inherited; more efficient rotation-synthesis methods can improve
 
 Let $`G_\rho`$ be the actual cost of supplying one independent copy of the contaminated source, including any required encoding or experimental preparation. Let $`G_{\rm test}`$ be the cost of supplying the one test. The complete gate-work account, when these costs are expressed in gate units, is
 
+**Equation (R3).**
+
 ```math
 G_{\rm total}
 =N G_\rho+G_{\rm test}+G_{\rm proc}.
-\tag{R3}
 ```
 
 All $`N`$ source invocations are charged, even though the learner may not know their generating circuits. Independent samples, rather than coherent control of a preparation map, are enough. Clean work-qubit initialization, measurement and discarding consumed samples are allowed known operations. Their number is polynomial in the displayed circuit size and is included when they are assigned a nonunit cost.
@@ -85,8 +88,8 @@ The sufficient budgets in [F2 and F3](finite_copy.md) are
 
 | Guarantee | Sufficient dimension regime | Training copies, up to constants |
 |---|---|---|
-| $`R\le\varepsilon`$, every $`a>0`$ | $`d\ge8/(a\varepsilon^2)`$ | $`a^{-2}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
-| $`R\le1/(2d)+\varepsilon`$, $`0<\eta=1-a\le1/4`$, $`\varepsilon\le\eta^2`$ | $`d\ge16\eta^2/(a^2\varepsilon^2)`$ | $`\eta^2a^{-4}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
+| $`R\le\varepsilon`$, every $`a \gt 0`$ | $`d\ge8/(a\varepsilon^2)`$ | $`a^{-2}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
+| $`R\le1/(2d)+\varepsilon`$, $`0 \lt \eta=1-a\le1/4`$, $`\varepsilon\le\eta^2`$ | $`d\ge16\eta^2/(a^2\varepsilon^2)`$ | $`\eta^2a^{-4}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
 | $`R\le1/(2d)+\eta^2/(2a^2)+\delta`$, $`\eta\le1/4`$ | Every $`d\ge2`$ | $`\delta^{-1}\log^2(1/\delta)`$ |
 
 These are constructive sufficient bounds. At fixed risk and clean fraction they have no dimension dependence in their number of samples. When the requested excess error is of order $`\eta/\sqrt d`$, the fine-precision bound may instead require order $`d^{3/2}`$ samples, up to contamination factors and logarithms. It must not be described as a dimension-independent high-precision algorithm.
