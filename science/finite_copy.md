@@ -163,7 +163,7 @@ This bound holds for real $`h`$, with either sign. Composing $`n`$ fresh-copy st
 **Equation (7).**
 
 ```math
-\left‖\Phi_{T/n}^{,n}-\mathcal U_T\right‖_\diamond
+‖\Phi_{T/n}^{,n}-\mathcal U_T‖_\diamond
 \le\frac{4T^2}{n}.
 ```
 

@@ -580,8 +580,8 @@
     {
       "path": "science/finite_copy.md",
       "index": 79,
-      "source_sha256": "cccb5a21c725358b4b5cae45ce85c86c72120dc7229b899c4188b34e60b5a429",
-      "expected_text": "\n  \n    \\left‖\\Phi_{T/n}^{,n}-\\mathcal U_T\\right‖_\\diamond \\le\\frac{4T^2}{n}. \n  \n"
+      "source_sha256": "255bcc7e5adedf795b5e34b99e4e8d7bf001120556567aafd692f2914f6e41db",
+      "expected_text": "\n  \n    ‖\n  \n  \n    Φ\n    \n      T\n      \n        /\n      \n      n\n    \n    \n      ,\n      n\n    \n  \n  −\n  \n    \n      U\n    \n    T\n  \n  \n    \n      ‖\n    \n    ⋄\n  \n  ≤\n  \n    \n      4\n      \n        T\n        2\n      \n    \n    n\n  \n  .\n"
     },
     {
       "path": "science/finite_copy.md",
