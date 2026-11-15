@@ -1,0 +1,1190 @@
+{
+  "status": "passed",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "floor_checks": {
+    "status": "passed",
+    "seed": 20261115,
+    "conventions": {
+      "a": "clean fraction",
+      "test_priors": "equal",
+      "risk": "misclassification probability",
+      "tv": "half l1"
+    },
+    "maxima": {
+      "witness_lp_gap": 6.938893903907228e-16,
+      "primal_decision_gap": 3.3306690738754696e-16,
+      "continuum_bound_excess": 0.0,
+      "commuting_formula_gap": 5.551115123125783e-17
+    },
+    "minimum_witness_residual_eigenvalue": -1.4016565685892601e-15,
+    "least_favorable_witness_cases": [
+      {
+        "d": 2,
+        "a": 0.5,
+        "q": 0.5,
+        "root_risk": 0.5,
+        "lp_risk": 0.5
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "q": 0.1273220037500352,
+        "root_risk": 0.3136610018750176,
+        "lp_risk": 0.31366100187501755
+      },
+      {
+        "d": 2,
+        "a": 0.75,
+        "q": 0.028595479208968287,
+        "root_risk": 0.26429773960448416,
+        "lp_risk": 0.2642977396044841
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "q": 0.015877081724072886,
+        "root_risk": 0.25793854086203644,
+        "lp_risk": 0.25793854086203644
+      },
+      {
+        "d": 2,
+        "a": 0.99,
+        "q": 2.550825193609422e-05,
+        "root_risk": 0.2500127541259681,
+        "lp_risk": 0.2500127541259681
+      },
+      {
+        "d": 2,
+        "a": 1.0,
+        "q": 0.0,
+        "root_risk": 0.25,
+        "lp_risk": 0.25
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "q": 0.6666666666666667,
+        "root_risk": 0.5,
+        "lp_risk": 0.5
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "q": 0.1273220037500357,
+        "root_risk": 0.23032766854168452,
+        "lp_risk": 0.23032766854168418
+      },
+      {
+        "d": 3,
+        "a": 0.6666666666666666,
+        "q": 0.0669872981077818,
+        "root_risk": 0.20016031572055756,
+        "lp_risk": 0.20016031572055704
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "q": 0.015877081724073306,
+        "root_risk": 0.17460520752870332,
+        "lp_risk": 0.17460520752870312
+      },
+      {
+        "d": 3,
+        "a": 0.99,
+        "q": 2.550825193609374e-05,
+        "root_risk": 0.1666794207926347,
+        "lp_risk": 0.16667942079263465
+      },
+      {
+        "d": 3,
+        "a": 1.0,
+        "q": 0.0,
+        "root_risk": 0.16666666666666666,
+        "lp_risk": 0.16666666666666663
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "q": 0.8,
+        "root_risk": 0.5,
+        "lp_risk": 0.5
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "q": 0.12732200375003644,
+        "root_risk": 0.16366100187501822,
+        "lp_risk": 0.16366100187501753
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "q": 0.01587708172407291,
+        "root_risk": 0.10793854086203646,
+        "lp_risk": 0.10793854086203647
+      },
+      {
+        "d": 5,
+        "a": 0.99,
+        "q": 2.5508251936093553e-05,
+        "root_risk": 0.10001275412596805,
+        "lp_risk": 0.100012754125968
+      },
+      {
+        "d": 5,
+        "a": 1.0,
+        "q": 0.0,
+        "root_risk": 0.1,
+        "lp_risk": 0.09999999999999998
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "q": 0.9090909090909091,
+        "root_risk": 0.5,
+        "lp_risk": 0.5
+      },
+      {
+        "d": 11,
+        "a": 0.5454545454545454,
+        "q": 0.10189437532531788,
+        "root_risk": 0.0964017331172044,
+        "lp_risk": 0.09640173311720446
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "q": 0.09225804993969103,
+        "root_risk": 0.09158357042439097,
+        "lp_risk": 0.09158357042439097
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "q": 0.015877081724073296,
+        "root_risk": 0.0533930863165821,
+        "lp_risk": 0.05339308631658196
+      },
+      {
+        "d": 11,
+        "a": 0.99,
+        "q": 2.5508251936093532e-05,
+        "root_risk": 0.0454672995805135,
+        "lp_risk": 0.04546729958051349
+      },
+      {
+        "d": 11,
+        "a": 1.0,
+        "q": 0.0,
+        "root_risk": 0.045454545454545456,
+        "lp_risk": 0.04545454545454547
+      }
+    ],
+    "arbitrary_spectrum_continuum_checks": [
+      {
+        "d": 2,
+        "a": 0.5,
+        "risk": 0.30517447225029704,
+        "universal_floor": 0.5,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.5,
+        "risk": 0.3236262084506533,
+        "universal_floor": 0.5,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.5,
+        "risk": 0.4654914663082788,
+        "universal_floor": 0.5,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.5,
+        "risk": 0.29373010164438856,
+        "universal_floor": 0.5,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.5,
+        "risk": 0.2532743707928038,
+        "universal_floor": 0.5,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "risk": 0.31040095894971764,
+        "universal_floor": 0.3136610018750176,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "risk": 0.30549202025225336,
+        "universal_floor": 0.3136610018750176,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "risk": 0.2530168595896799,
+        "universal_floor": 0.3136610018750176,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "risk": 0.2848969480614806,
+        "universal_floor": 0.3136610018750176,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "risk": 0.27721964721129166,
+        "universal_floor": 0.3136610018750176,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.75,
+        "risk": 0.25505823923328075,
+        "universal_floor": 0.26429773960448416,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.75,
+        "risk": 0.2569659489927077,
+        "universal_floor": 0.26429773960448416,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.75,
+        "risk": 0.2642828950763056,
+        "universal_floor": 0.26429773960448416,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.75,
+        "risk": 0.2583863887824892,
+        "universal_floor": 0.26429773960448416,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.75,
+        "risk": 0.2532639581674322,
+        "universal_floor": 0.26429773960448416,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "risk": 0.25234180333476586,
+        "universal_floor": 0.25793854086203644,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "risk": 0.2579131581037704,
+        "universal_floor": 0.25793854086203644,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "risk": 0.254485575285524,
+        "universal_floor": 0.25793854086203644,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "risk": 0.25790807618456607,
+        "universal_floor": 0.25793854086203644,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "risk": 0.2509857164944,
+        "universal_floor": 0.25793854086203644,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.99,
+        "risk": 0.2500126645734804,
+        "universal_floor": 0.2500127541259681,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.99,
+        "risk": 0.2500122836865421,
+        "universal_floor": 0.2500127541259681,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.99,
+        "risk": 0.25001268858261766,
+        "universal_floor": 0.2500127541259681,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.99,
+        "risk": 0.2500052910276282,
+        "universal_floor": 0.2500127541259681,
+        "vertex_count": 2
+      },
+      {
+        "d": 2,
+        "a": 0.99,
+        "risk": 0.2500119966106746,
+        "universal_floor": 0.2500127541259681,
+        "vertex_count": 2
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "risk": 0.3362055994890137,
+        "universal_floor": 0.5,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "risk": 0.3365111546860142,
+        "universal_floor": 0.5,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "risk": 0.37099962014950555,
+        "universal_floor": 0.5,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "risk": 0.33394249960790656,
+        "universal_floor": 0.5,
+        "vertex_count": 4
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "risk": 0.33360399585622535,
+        "universal_floor": 0.5,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "risk": 0.1718174386905933,
+        "universal_floor": 0.23032766854168452,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "risk": 0.2027425246375396,
+        "universal_floor": 0.23032766854168452,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "risk": 0.22010499956792484,
+        "universal_floor": 0.23032766854168452,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "risk": 0.22328621867799658,
+        "universal_floor": 0.23032766854168452,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "risk": 0.19162634394382194,
+        "universal_floor": 0.23032766854168452,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6666666666666666,
+        "risk": 0.19554217493045523,
+        "universal_floor": 0.20016031572055756,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6666666666666666,
+        "risk": 0.18928779795250006,
+        "universal_floor": 0.20016031572055756,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6666666666666666,
+        "risk": 0.190389974067406,
+        "universal_floor": 0.20016031572055756,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6666666666666666,
+        "risk": 0.17316589502042623,
+        "universal_floor": 0.20016031572055756,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.6666666666666666,
+        "risk": 0.1857866237136655,
+        "universal_floor": 0.20016031572055756,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "risk": 0.17216033239606632,
+        "universal_floor": 0.17460520752870332,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "risk": 0.1700881854435815,
+        "universal_floor": 0.17460520752870332,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "risk": 0.17279529816624928,
+        "universal_floor": 0.17460520752870332,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "risk": 0.16927082186801345,
+        "universal_floor": 0.17460520752870332,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "risk": 0.17186628647695257,
+        "universal_floor": 0.17460520752870332,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.99,
+        "risk": 0.1666732387578559,
+        "universal_floor": 0.1666794207926347,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.99,
+        "risk": 0.16667421235546587,
+        "universal_floor": 0.1666794207926347,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.99,
+        "risk": 0.1666777351920128,
+        "universal_floor": 0.1666794207926347,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.99,
+        "risk": 0.16667308765603928,
+        "universal_floor": 0.1666794207926347,
+        "vertex_count": 3
+      },
+      {
+        "d": 3,
+        "a": 0.99,
+        "risk": 0.16667176801168582,
+        "universal_floor": 0.1666794207926347,
+        "vertex_count": 3
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "risk": 0.3092907242489948,
+        "universal_floor": 0.5,
+        "vertex_count": 8
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "risk": 0.4001001857928452,
+        "universal_floor": 0.5,
+        "vertex_count": 9
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "risk": 0.3326025042847298,
+        "universal_floor": 0.5,
+        "vertex_count": 8
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "risk": 0.17632183322128547,
+        "universal_floor": 0.5,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "risk": 0.3705281026212297,
+        "universal_floor": 0.5,
+        "vertex_count": 8
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "risk": 0.12435296622725445,
+        "universal_floor": 0.16366100187501822,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "risk": 0.11674125759656484,
+        "universal_floor": 0.16366100187501822,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "risk": 0.12398892926883132,
+        "universal_floor": 0.16366100187501822,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "risk": 0.1324701060750777,
+        "universal_floor": 0.16366100187501822,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "risk": 0.12788712566663607,
+        "universal_floor": 0.16366100187501822,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "risk": 0.1002683497452741,
+        "universal_floor": 0.10793854086203646,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "risk": 0.10094171833977239,
+        "universal_floor": 0.10793854086203646,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "risk": 0.10692167118348617,
+        "universal_floor": 0.10793854086203646,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "risk": 0.10749741303711047,
+        "universal_floor": 0.10793854086203646,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "risk": 0.10055439021762269,
+        "universal_floor": 0.10793854086203646,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.99,
+        "risk": 0.10000589262251458,
+        "universal_floor": 0.10001275412596805,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.99,
+        "risk": 0.10000275078312804,
+        "universal_floor": 0.10001275412596805,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.99,
+        "risk": 0.1000026520499876,
+        "universal_floor": 0.10001275412596805,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.99,
+        "risk": 0.10000281621669105,
+        "universal_floor": 0.10001275412596805,
+        "vertex_count": 5
+      },
+      {
+        "d": 5,
+        "a": 0.99,
+        "risk": 0.10000840033565284,
+        "universal_floor": 0.10001275412596805,
+        "vertex_count": 5
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "risk": 0.09554004954282691,
+        "universal_floor": 0.5,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "risk": 0.19819456487968995,
+        "universal_floor": 0.5,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "risk": 0.31640443999163126,
+        "universal_floor": 0.5,
+        "vertex_count": 27
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "risk": 0.3059011818573534,
+        "universal_floor": 0.5,
+        "vertex_count": 32
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "risk": 0.31873509767387925,
+        "universal_floor": 0.5,
+        "vertex_count": 27
+      },
+      {
+        "d": 11,
+        "a": 0.5454545454545454,
+        "risk": 0.07192351365124316,
+        "universal_floor": 0.0964017331172044,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.5454545454545454,
+        "risk": 0.05779229065306912,
+        "universal_floor": 0.0964017331172044,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.5454545454545454,
+        "risk": 0.07474098010483676,
+        "universal_floor": 0.0964017331172044,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.5454545454545454,
+        "risk": 0.052190581392058844,
+        "universal_floor": 0.0964017331172044,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.5454545454545454,
+        "risk": 0.06432323663687894,
+        "universal_floor": 0.0964017331172044,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "risk": 0.053062379675505644,
+        "universal_floor": 0.09158357042439097,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "risk": 0.07650532126734239,
+        "universal_floor": 0.09158357042439097,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "risk": 0.05529183613618288,
+        "universal_floor": 0.09158357042439097,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "risk": 0.05087781995981572,
+        "universal_floor": 0.09158357042439097,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "risk": 0.0698772590339154,
+        "universal_floor": 0.09158357042439097,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "risk": 0.04747852999321911,
+        "universal_floor": 0.0533930863165821,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "risk": 0.04709882685927885,
+        "universal_floor": 0.0533930863165821,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "risk": 0.04731142513929115,
+        "universal_floor": 0.0533930863165821,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "risk": 0.04592931916945142,
+        "universal_floor": 0.0533930863165821,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "risk": 0.04776051161847933,
+        "universal_floor": 0.0533930863165821,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.99,
+        "risk": 0.045457965406752066,
+        "universal_floor": 0.0454672995805135,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.99,
+        "risk": 0.04545767321390526,
+        "universal_floor": 0.0454672995805135,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.99,
+        "risk": 0.04545869286219811,
+        "universal_floor": 0.0454672995805135,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.99,
+        "risk": 0.045458499989541434,
+        "universal_floor": 0.0454672995805135,
+        "vertex_count": 11
+      },
+      {
+        "d": 11,
+        "a": 0.99,
+        "risk": 0.04545859642134087,
+        "universal_floor": 0.0454672995805135,
+        "vertex_count": 11
+      }
+    ],
+    "commuting_comparator_cases": [
+      {
+        "d": 2,
+        "a": 0.5,
+        "compatible_dimension": 2,
+        "risk": 0.5
+      },
+      {
+        "d": 2,
+        "a": 0.3,
+        "compatible_dimension": 2,
+        "risk": 0.5
+      },
+      {
+        "d": 2,
+        "a": 0.6,
+        "compatible_dimension": 1,
+        "risk": 0.25
+      },
+      {
+        "d": 2,
+        "a": 0.8,
+        "compatible_dimension": 1,
+        "risk": 0.25
+      },
+      {
+        "d": 2,
+        "a": 1.0,
+        "compatible_dimension": 1,
+        "risk": 0.25
+      },
+      {
+        "d": 3,
+        "a": 0.3333333333333333,
+        "compatible_dimension": 3,
+        "risk": 0.5
+      },
+      {
+        "d": 3,
+        "a": 0.3,
+        "compatible_dimension": 3,
+        "risk": 0.5
+      },
+      {
+        "d": 3,
+        "a": 0.6,
+        "compatible_dimension": 1,
+        "risk": 0.16666666666666663
+      },
+      {
+        "d": 3,
+        "a": 0.8,
+        "compatible_dimension": 1,
+        "risk": 0.16666666666666663
+      },
+      {
+        "d": 3,
+        "a": 1.0,
+        "compatible_dimension": 1,
+        "risk": 0.16666666666666663
+      },
+      {
+        "d": 5,
+        "a": 0.2,
+        "compatible_dimension": 5,
+        "risk": 0.5
+      },
+      {
+        "d": 5,
+        "a": 0.3,
+        "compatible_dimension": 3,
+        "risk": 0.29999999999999993
+      },
+      {
+        "d": 5,
+        "a": 0.6,
+        "compatible_dimension": 1,
+        "risk": 0.09999999999999998
+      },
+      {
+        "d": 5,
+        "a": 0.8,
+        "compatible_dimension": 1,
+        "risk": 0.09999999999999998
+      },
+      {
+        "d": 5,
+        "a": 1.0,
+        "compatible_dimension": 1,
+        "risk": 0.09999999999999998
+      },
+      {
+        "d": 11,
+        "a": 0.09090909090909091,
+        "compatible_dimension": 11,
+        "risk": 0.5
+      },
+      {
+        "d": 11,
+        "a": 0.3,
+        "compatible_dimension": 3,
+        "risk": 0.1363636363636364
+      },
+      {
+        "d": 11,
+        "a": 0.6,
+        "compatible_dimension": 1,
+        "risk": 0.04545454545454547
+      },
+      {
+        "d": 11,
+        "a": 0.8,
+        "compatible_dimension": 1,
+        "risk": 0.04545454545454547
+      },
+      {
+        "d": 11,
+        "a": 1.0,
+        "compatible_dimension": 1,
+        "risk": 0.04545454545454547
+      }
+    ],
+    "fixed_eta_limit_checks": [
+      {
+        "eta": 0.01,
+        "d": 1000,
+        "sqrt_d_q": 0.0008066417524745451,
+        "limit_coefficient": 0.005037815259212097,
+        "d_scaled_remainder": -0.13380145456652462
+      },
+      {
+        "eta": 0.01,
+        "d": 10000,
+        "sqrt_d_q": 0.0025508251936093456,
+        "limit_coefficient": 0.005037815259212097,
+        "d_scaled_remainder": -0.24869900656027513
+      },
+      {
+        "eta": 0.01,
+        "d": 1000000,
+        "sqrt_d_q": 0.005001625385879473,
+        "limit_coefficient": 0.005037815259212097,
+        "d_scaled_remainder": -0.03618987333262367
+      },
+      {
+        "eta": 0.1,
+        "d": 1000,
+        "sqrt_d_q": 0.04870234639613169,
+        "limit_coefficient": 0.05409255338945984,
+        "d_scaled_remainder": -0.17045331158684973
+      },
+      {
+        "eta": 0.1,
+        "d": 10000,
+        "sqrt_d_q": 0.05189404024098915,
+        "limit_coefficient": 0.05409255338945984,
+        "d_scaled_remainder": -0.21985131484706885
+      },
+      {
+        "eta": 0.1,
+        "d": 1000000,
+        "sqrt_d_q": 0.05401429480918359,
+        "limit_coefficient": 0.05409255338945984,
+        "d_scaled_remainder": -0.07825858027625202
+      },
+      {
+        "eta": 0.25,
+        "d": 1000,
+        "sqrt_d_q": 0.15626268891077993,
+        "limit_coefficient": 0.15470053837925146,
+        "d_scaled_remainder": 0.04939953727672603
+      },
+      {
+        "eta": 0.25,
+        "d": 10000,
+        "sqrt_d_q": 0.1529874625080451,
+        "limit_coefficient": 0.15470053837925146,
+        "d_scaled_remainder": -0.1713075871206363
+      },
+      {
+        "eta": 0.25,
+        "d": 1000000,
+        "sqrt_d_q": 0.15460504111391088,
+        "limit_coefficient": 0.15470053837925146,
+        "d_scaled_remainder": -0.09549726534059015
+      },
+      {
+        "eta": 0.7,
+        "d": 1000,
+        "sqrt_d_q": 0.8310939473187321,
+        "limit_coefficient": 0.8257418583505536,
+        "d_scaled_remainder": 0.16924791379304555
+      },
+      {
+        "eta": 0.7,
+        "d": 10000,
+        "sqrt_d_q": 0.8298000128217591,
+        "limit_coefficient": 0.8257418583505536,
+        "d_scaled_remainder": 0.4058154471205458
+      },
+      {
+        "eta": 0.7,
+        "d": 1000000,
+        "sqrt_d_q": 0.8260240112630389,
+        "limit_coefficient": 0.8257418583505536,
+        "d_scaled_remainder": 0.28215291248540314
+      }
+    ],
+    "limits": "Finite numerical checks do not prove the theorem, external novelty, or a finite-copy quantum advantage."
+  },
+  "circuit_checks": {
+    "status": "passed",
+    "maximum_first_order_identity_error": 0.0,
+    "controlled_channel_cases": [
+      {
+        "d": 2,
+        "reference_dimension": 2,
+        "h": 0.005,
+        "trace_distance_unhalved": 2.067107377255849e-05,
+        "quadratic_upper": 0.0001
+      },
+      {
+        "d": 2,
+        "reference_dimension": 2,
+        "h": 0.03,
+        "trace_distance_unhalved": 0.0007440140019581136,
+        "quadratic_upper": 0.0036
+      },
+      {
+        "d": 2,
+        "reference_dimension": 2,
+        "h": 0.1,
+        "trace_distance_unhalved": 0.008250129218965887,
+        "quadratic_upper": 0.04000000000000001
+      },
+      {
+        "d": 2,
+        "reference_dimension": 2,
+        "h": -0.03,
+        "trace_distance_unhalved": 0.0007440140019581205,
+        "quadratic_upper": 0.0036
+      },
+      {
+        "d": 2,
+        "copies": 8,
+        "positive_qpe_time": 1.0,
+        "trace_distance_unhalved": 0.0988981217895532,
+        "hybrid_upper": 0.5
+      },
+      {
+        "d": 2,
+        "copies": 32,
+        "positive_qpe_time": 1.0,
+        "trace_distance_unhalved": 0.02554185711910758,
+        "hybrid_upper": 0.125
+      },
+      {
+        "d": 3,
+        "reference_dimension": 2,
+        "h": 0.005,
+        "trace_distance_unhalved": 2.2013981948951002e-05,
+        "quadratic_upper": 0.0001
+      },
+      {
+        "d": 3,
+        "reference_dimension": 2,
+        "h": 0.03,
+        "trace_distance_unhalved": 0.0007923381436908654,
+        "quadratic_upper": 0.0036
+      },
+      {
+        "d": 3,
+        "reference_dimension": 2,
+        "h": 0.1,
+        "trace_distance_unhalved": 0.00878469324519332,
+        "quadratic_upper": 0.04000000000000001
+      },
+      {
+        "d": 3,
+        "reference_dimension": 2,
+        "h": -0.03,
+        "trace_distance_unhalved": 0.0007923381436908976,
+        "quadratic_upper": 0.0036
+      },
+      {
+        "d": 3,
+        "copies": 8,
+        "positive_qpe_time": 1.0,
+        "trace_distance_unhalved": 0.10522231610647874,
+        "hybrid_upper": 0.5
+      },
+      {
+        "d": 3,
+        "copies": 32,
+        "positive_qpe_time": 1.0,
+        "trace_distance_unhalved": 0.02719546275021051,
+        "hybrid_upper": 0.125
+      }
+    ],
+    "coherent_control_sign_sensitivity": [
+      {
+        "d": 2,
+        "correct_error": 2.067107377255849e-05,
+        "reversed_sign_error": 0.0031504448228416985
+      },
+      {
+        "d": 3,
+        "correct_error": 2.2013981948951002e-05,
+        "reversed_sign_error": 0.004372120519793235
+      }
+    ],
+    "phase_estimation_cases": [
+      {
+        "t": 0.25,
+        "L": 1024,
+        "r": 19,
+        "gamma": 0.01,
+        "maximum_one_round_failure": 0.010117290501311462,
+        "maximum_cutoff_endpoint_error": 9.079248225028863e-21
+      },
+      {
+        "t": 0.07,
+        "L": 4096,
+        "r": 19,
+        "gamma": 0.01,
+        "maximum_one_round_failure": 0.008808236744712506,
+        "maximum_cutoff_endpoint_error": 8.893042477230812e-20
+      }
+    ],
+    "limits": "Finite entangled inputs check phase and reference conventions; they do not certify a diamond norm or a universal QPE tail theorem."
+  },
+  "documentation_checks": {
+    "markdown_pages": 10,
+    "local_links_checked": 69,
+    "scope": "Local file/heading routes and balanced fences only; actual-host mathematical display is separate."
+  }
+}
