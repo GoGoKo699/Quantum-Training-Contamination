@@ -139,6 +139,29 @@ def run_checks() -> dict:
     arbitrary_spectra = []
     commuting_cases = []
 
+    # The tutorial's exact qubit construction is checked as actual mixtures,
+    # independently of the general spectrum/witness parameterization above.
+    qubit_q = (9 - 4 * np.sqrt(5)) / 18
+    clean_plus = np.array([np.sqrt(1 - qubit_q), np.sqrt(qubit_q)])
+    clean_minus = np.array([np.sqrt(1 - qubit_q), -np.sqrt(qubit_q)])
+    equatorial_plus = np.array([1., 1.]) / np.sqrt(2)
+    equatorial_minus = np.array([1., -1.]) / np.sqrt(2)
+    p_plus = np.outer(clean_plus, clean_plus)
+    p_minus = np.outer(clean_minus, clean_minus)
+    rho_plus = .9 * p_plus + .1 * np.outer(equatorial_minus, equatorial_minus)
+    rho_minus = .9 * p_minus + .1 * np.outer(equatorial_plus, equatorial_plus)
+    displayed_rho = np.diag([.5 + 1 / np.sqrt(5), .5 - 1 / np.sqrt(5)])
+    mixture_gap = max(float(np.linalg.norm(rho_plus - displayed_rho, ord='nuc')),
+                      float(np.linalg.norm(rho_minus - displayed_rho, ord='nuc')))
+    assert mixture_gap < TOL
+    effect = np.diag([1., 0.])
+    qubit_risk = (1 - np.trace(effect @ p_plus) + np.trace(effect) / 2) / 2
+    assert abs(qubit_risk - root_floor(2, .9)[1]) < TOL
+    tutorial_example = {"d": 2, "a": .9, "q": qubit_q,
+                        "mixture_matrix_trace_norm_gap": mixture_gap,
+                        "robust_effect_risk": float(qubit_risk),
+                        "oracle_risk": .25}
+
     for d in [2, 3, 5, 11]:
         for a in sorted(set([1 / d, (1 + 1 / d) / 2, .6, .8, .99, 1.])):
             q, predicted = root_floor(d, a)
@@ -238,6 +261,7 @@ def run_checks() -> dict:
                         "risk": "misclassification probability", "tv": "half l1"},
         "maxima": maxima, "minimum_witness_residual_eigenvalue": minimum_psd,
         "least_favorable_witness_cases": witnesses,
+        "tutorial_qubit_example": tutorial_example,
         "arbitrary_spectrum_continuum_checks": arbitrary_spectra,
         "commuting_comparator_cases": commuting_cases, "fixed_eta_limit_checks": limits,
         "limits": "Finite numerical checks do not prove the theorem, external novelty, or a finite-copy quantum advantage.",

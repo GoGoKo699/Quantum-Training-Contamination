@@ -45,6 +45,17 @@ Start with the [model and information access](science/model.md), then follow the
 
 The exact scalar Rényi-entropy/variation extremal is inherited from Rioul. Ensemble nonuniqueness, minimax theory, sample-based Hamiltonian simulation and clean quantum-reference advantages are established ingredients. The contribution here is their operational connection to the solved contaminated-training prediction limit and its noncommuting-source consequence. [Related work](references/related_work.md) and [bibliography](references/references.bib) identify the dependencies and nearby tasks.
 
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**, using the author's standard-layout manuscript. The learning route connects selected textbook foundations to the exact prediction limit and the separate achievable finite-copy bounds.
+
+| To understand | Read |
+|---|---|
+| How the learning materials fit together | [Learning overview](learning/README.md) |
+| One complete qubit experiment and its generalization | [Worked tutorial](learning/TUTORIAL.md) |
+| Relevant textbook locations, notation, and the missing steps | [Watrous bridge](learning/WATROUS_BRIDGE.md) |
+| The complete project's conceptual dependencies | [30-milestone map](learning/MILESTONES.md), with 12 background and 18 narrative milestones |
+
 ## Reproduce the finite checks
 
 With Python 3.12 or later:

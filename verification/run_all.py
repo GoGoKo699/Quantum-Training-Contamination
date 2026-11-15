@@ -10,6 +10,7 @@ import scipy
 from check_floor import run_checks
 from check_circuit import run_checks as run_circuit_checks
 from check_docs import run_checks as run_doc_checks
+from check_learning import run_checks as run_learning_checks
 
 
 def main():
@@ -20,6 +21,7 @@ def main():
         "floor_checks": run_checks(),
         "circuit_checks": run_circuit_checks(),
         "documentation_checks": run_doc_checks(),
+        "learning_checks": run_learning_checks(),
     }
     destination = Path(__file__).with_name("results.json")
     destination.write_text(json.dumps(result, indent=2) + "\n")

@@ -50,6 +50,13 @@ Run `python3 verification/check_floor.py` separately to write the more focused
 - **The finite phase-estimation filter.** Direct Fourier probabilities test
   signed-phase unwrapping, clipping, single-round tails, and the repeated-median
   acceptance bounds at both sides of the cutoff band.
+- **The shared learning route.** Source checks require exactly 30 ordered
+  milestone headings, nonempty stated fields, the declared 12/18 phase split,
+  and dependencies pointing only to earlier milestones. Required shared pages
+  must exist; known personal coaching/learner-record filenames must be absent.
+  These checks do not grade understanding targets or establish scientific
+  correctness. Local link/fence checks and actual hosted mathematical review
+  remain separate.
 
 The checks use dimensions up to 11 for the matrix and continuum-LP comparisons;
 the scalar limit evaluation reaches dimension one million. Positive-semidefinite

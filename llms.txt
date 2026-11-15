@@ -11,6 +11,10 @@ Authoritative routes:
 - science/resources.md: N log2(d) offline sample storage, active versus total width, finite gate synthesis, source preparation NG_rho, one consumed test and classical output, inherited clean compiler comparator.
 - science/interpretation.md: prediction versus reconstruction, absolute versus relative oracle accuracy, noncommuting ambiguity, fixed-precision sample gap and restrictions.
 - references/related_work.md and references/references.bib: inherited ingredients and theorem-level model comparisons.
+- learning/README.md: shared learning navigation around the single anchor, Watrous, The Theory of Quantum Information (2018), author's standard-layout manuscript.
+- learning/WATROUS_BRIDGE.md: verified textbook sections/theorems/printed pages, notation and fidelity/norm conventions, and the bridge to the project-specific proofs.
+- learning/TUTORIAL.md: a complete qubit example connected to source ambiguity, the exact limiting risk, commuting contamination and finite-copy implementation.
+- learning/MILESTONES.md: exactly 30 common understanding targets, with 12 background/preliminaries and 18 narrative/innovation milestones and their dependencies.
 - verification/README.md and verification/run_all.py: actual numerical checks, reproduction, environment and limits.
 
 Preserve these distinctions:
@@ -21,6 +25,7 @@ Preserve these distinctions:
 - R_infinity is the fixed-d,a N-to-infinity limit. A subsequent fixed-a d-to-infinity expansion is not a joint finite-N optimum.
 - Risk includes the oracle error1/(2d); excess subtracts it. Vanishing absolute excess does not imply relative oracle accuracy.
 - Rioul supplies the exact scalar entropy/TV extremal. Ensemble ambiguity, minimax, DME and clean memory advantages are inherited.
+- Watrous is the only educational anchor. Primary research references supply attributed ingredients beyond the textbook; the learning pages do not replace the canonical science or relax its assumptions.
 - F1-F3 are achievable finite-copy bounds with explicit error charges. They do not prove optimal classification sample complexity near the information floor.
 - The comparator may measure training collectively and retain unlimited classical information; its restriction is source-dependent quantum information across the train-test boundary.
 - A native-copy separation is not a generic speedup for classical data or an unconditional hardware runtime claim. Every source preparation remains charged.

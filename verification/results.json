@@ -184,6 +184,14 @@
         "lp_risk": 0.04545454545454547
       }
     ],
+    "tutorial_qubit_example": {
+      "d": 2,
+      "a": 0.9,
+      "q": 0.00309600500004671,
+      "mixture_matrix_trace_norm_gap": 3.7700614039532304e-16,
+      "robust_effect_risk": 0.25154800250002335,
+      "oracle_risk": 0.25
+    },
     "arbitrary_spectrum_continuum_checks": [
       {
         "d": 2,
@@ -1183,8 +1191,25 @@
     "limits": "Finite entangled inputs check phase and reference conventions; they do not certify a diamond norm or a universal QPE tail theorem."
   },
   "documentation_checks": {
-    "markdown_pages": 10,
-    "local_links_checked": 69,
+    "markdown_pages": 15,
+    "local_links_checked": 171,
     "scope": "Local file/heading routes and balanced fences only; actual-host mathematical display is separate."
+  },
+  "learning_checks": {
+    "status": "passed",
+    "milestone_headings": 30,
+    "phase_counts": {
+      "background/preliminaries": 12,
+      "narrative/innovation": 18
+    },
+    "explicit_prior_dependency_references": 88,
+    "shared_pages": [
+      "README.md",
+      "WATROUS_BRIDGE.md",
+      "MILESTONES.md",
+      "TUTORIAL.md"
+    ],
+    "known_personal_record_files_found": [],
+    "scope": "Structural source checks only; scientific/pedagogical reading and actual hosted mathematical rendering are separate evidence."
   }
 }
