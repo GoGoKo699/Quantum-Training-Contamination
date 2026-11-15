@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   hosted-mathematics:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -18,11 +18,12 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install browser dependencies
+        id: browser_dependencies
         run: |
           npm --prefix "$RUNNER_TEMP/math-dependencies" install playwright@1.56.1 mathjax-full@3.2.1
           "$RUNNER_TEMP/math-dependencies/node_modules/.bin/playwright" install --with-deps chromium
@@ -33,7 +34,7 @@ jobs:
         run: |
           node verification/hosted_math/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE" --repository "$GITHUB_REPOSITORY" --revision "$SOURCE_SHA" --output "$RUNNER_TEMP/hosted-representative" --page README.md
       - name: Check every hosted Markdown page
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && steps.browser_dependencies.outcome == 'success' }}
         env:
           NODE_PATH: ${{ runner.temp }}/math-dependencies/node_modules
           SOURCE_SHA: ${{ github.event.pull_request.head.sha }}
