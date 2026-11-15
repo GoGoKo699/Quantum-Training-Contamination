@@ -580,8 +580,8 @@
     {
       "path": "science/finite_copy.md",
       "index": 79,
-      "source_sha256": "255bcc7e5adedf795b5e34b99e4e8d7bf001120556567aafd692f2914f6e41db",
-      "expected_text": "\n  \n    ‖\n  \n  \n    Φ\n    \n      T\n      \n        /\n      \n      n\n    \n    \n      ,\n      n\n    \n  \n  −\n  \n    \n      U\n    \n    T\n  \n  \n    \n      ‖\n    \n    ⋄\n  \n  ≤\n  \n    \n      4\n      \n        T\n        2\n      \n    \n    n\n  \n  .\n"
+      "source_sha256": "f4b809bbc9d15571d85e54da8ca405f900104b472e775cf2a00eaa4a4b63a883",
+      "expected_text": "\n  \n    ‖\n  \n  \n    Φ\n    \n      T\n      \n        /\n      \n      n\n    \n    \n      ∘\n      n\n    \n  \n  −\n  \n    \n      U\n    \n    T\n  \n  \n    \n      ‖\n    \n    ⋄\n  \n  ≤\n  \n    \n      4\n      \n        T\n        2\n      \n    \n    n\n  \n  .\n"
     },
     {
       "path": "science/finite_copy.md",
