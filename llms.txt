@@ -1,0 +1,27 @@
+# Quantum Training Contamination
+
+Question: what prediction error remains when iid quantum training specimens are contaminated, but one later test is clean?
+
+Authoritative routes:
+- README.md: scientific proposition, result table, reading route and reproduction.
+- science/model.md: input chronology, pure clean target P, rho=aP+(1-a)sigma, test P versus I/d, risk versus excess, coherent and classical-compiled learners.
+- science/precision_floor.md: exact finite-d asymptotic minimax law, compatibility reduction, inherited Renyi/TV extremal, finite phase adversary, fixed-d infinite-training attainability, uniform small-contamination law, fixed-a dimension expansion, reconstruction lower bounds.
+- science/commuting_comparison.md: same quantum experiment with [sigma,P]=0; exact risk min(d,floor(1/a))/(2d), unknown eigenbasis allowed, and classical point-target specialization.
+- science/finite_copy.md: F1 gap-free QPE decision and explicit copy allocation, reference-stable controlled partial-SWAP simulation, F2 fixed-risk construction, F3 contamination-sensitive sufficient precision bounds.
+- science/resources.md: N log2(d) offline sample storage, active versus total width, finite gate synthesis, source preparation NG_rho, one consumed test and classical output, inherited clean compiler comparator.
+- science/interpretation.md: prediction versus reconstruction, absolute versus relative oracle accuracy, noncommuting ambiguity, fixed-precision sample gap and restrictions.
+- references/related_work.md and references/references.bib: inherited ingredients and theorem-level model comparisons.
+- verification/README.md and verification/run_all.py: actual numerical checks, reproduction, environment and limits.
+
+Preserve these distinctions:
+- The clean target P is pure; sigma may be arbitrary and noncommuting. Pure-source inverse compatibility cannot be transferred to an arbitrary mixed clean state.
+- The source is IID and contamination affects training only. Gates/storage and the later test are ideal under the stated model.
+- All N training copies arrive before the test. Active two-register processing does not remove N-register offline storage.
+- The output is one label for one consumed test; no reusable trained model or source calls after test arrival are supplied.
+- R_infinity is the fixed-d,a N-to-infinity limit. A subsequent fixed-a d-to-infinity expansion is not a joint finite-N optimum.
+- Risk includes the oracle error1/(2d); excess subtracts it. Vanishing absolute excess does not imply relative oracle accuracy.
+- Rioul supplies the exact scalar entropy/TV extremal. Ensemble ambiguity, minimax, DME and clean memory advantages are inherited.
+- F1-F3 are achievable finite-copy bounds with explicit error charges. They do not prove optimal classification sample complexity near the information floor.
+- The comparator may measure training collectively and retain unlimited classical information; its restriction is source-dependent quantum information across the train-test boundary.
+- A native-copy separation is not a generic speedup for classical data or an unconditional hardware runtime claim. Every source preparation remains charged.
+- Numerical checks test finite instances and circuit identities. Written proofs establish universal statements; neither tests nor this repository certify priority or external peer review.
