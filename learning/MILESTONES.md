@@ -122,7 +122,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** How does positive domination become an exact condition on the clean state’s eigenbasis amplitudes?
-- **Understanding target:** Derive $`aP\preceq\rho\iff\sum_{\lambda_i \gt 0}p_i/\lambda_i\le1/a`$, with zero amplitude outside the support. Explain why purity is essential to this rank-one inverse criterion.
+- **Understanding target:** Derive $`aP\preceq\rho\Leftrightarrow\sum_{\lambda_i \gt 0}p_i/\lambda_i\le1/a`$, with zero amplitude outside the support. Explain why purity is essential to this rank-one inverse criterion.
 - **Dependencies and story role:** M04, M05, M12; this is the first local step of the operational reduction.
 - **Conceptual connection:** Conjugating by the support inverse square root replaces a matrix inequality by the only nonzero eigenvalue of a rank-one operator.
 - **Source pointers:** Watrous §§1.1.2–1.1.3; [precision floor: scalar decision reduction](../science/precision_floor.md#from-quantum-compatibility-to-a-scalar-decision-problem).

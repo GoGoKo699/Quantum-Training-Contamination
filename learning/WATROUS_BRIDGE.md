@@ -27,15 +27,15 @@ These sections supply foundations. The exact contamination reduction and asympto
 
 | Watrous notation or convention | Notation here |
 |---|---|
-| A unit column vector $`u`$ and its matrix $`uu^*`$ | $`|\psi\rangle`$ and $`P=|\psi\rangle\langle\psi|`$ |
+| A unit column vector $`u`$ and its matrix $`uu^*`$ | $`\vert \psi\rangle`$ and $`P=\vert \psi\rangle\langle\psi\vert `$ |
 | $`\mathrm D(\mathcal X)`$, $`\mathrm{Pos}(\mathcal X)`$, identity $`1_{\mathcal X}`$ | Density operators, positive semidefinite operators, and $`I_d`$ on $`\mathbb C^d`$ |
 | A measurement $`\mu`$ with outcomes zero and one | $`\mu(1)=E`$, $`\mu(0)=I-E`$; $`E`$ means predict the clean class |
 | Hilbert–Schmidt pairing $`\langle A,B\rangle=\mathrm{Tr}(A^*B)`$ | For effects and states, $`\mathrm{Tr}(E\rho)`$ is an acceptance probability |
-| Root fidelity $`F(\rho,\tau)=\|\sqrt\rho\sqrt\tau\|_1`$ (§3.2) | Reconstruction overlap $`\mathrm{Tr}(P\widehat\tau)`$ equals $`F(P,\widehat\tau)^2`$ |
-| Completely bounded trace norm $`|||\Phi|||_1`$ | $`\|\Phi\|_\diamond`$, unhalved; a separately named normalized channel distance is half this value |
+| Root fidelity $`F(\rho,\tau)=‖\sqrt\rho\sqrt\tau‖_1`$ (§3.2) | Reconstruction overlap $`\mathrm{Tr}(P\widehat\tau)`$ equals $`F(P,\widehat\tau)^2`$ |
+| Completely bounded trace norm $`\vert \vert \vert \Phi\vert \vert \vert _1`$ | $`‖\Phi‖_\diamond`$, unhalved; a separately named normalized channel distance is half this value |
 | $`v\prec u`$ means $`u`$ majorizes $`v`$ | $`p\prec p^*(q)`$; the concentrated vector is on the majorizing side |
 
-The project writes $`D(\rho,\tau)=\frac12\|\rho-\tau\|_1`$ when using normalized trace distance. Total classification risk $`R`$ is an error probability; excess risk is $`R-1/(2d)`$. Neither quantity is the fidelity or the norm error of a reconstructed state. The control error $`\xi`$ in the finite-copy theorem is an **unhalved** diamond bound, so its contribution to risk is at most $`\xi/2`$.
+The project writes $`D(\rho,\tau)=\frac12‖\rho-\tau‖_1`$ when using normalized trace distance. Total classification risk $`R`$ is an error probability; excess risk is $`R-1/(2d)`$. Neither quantity is the fidelity or the norm error of a reconstructed state. The control error $`\xi`$ in the finite-copy theorem is an **unhalved** diamond bound, so its contribution to risk is at most $`\xi/2`$.
 
 ## From the book to the prediction floor
 

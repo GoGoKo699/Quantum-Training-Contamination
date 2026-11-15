@@ -15,9 +15,10 @@ All training copies arrive before the test. The learner retains them, then consu
 
 Let $`0 \lt t\le1/4`$, $`0 \lt \gamma \lt 1/2`$, and $`\xi \gt 0`$. There is a finite circuit with classification risk
 
+**Equation (F1).**
+
 ```math
 R\le \frac{t}{a}+\frac{1}{2dt}+\gamma+\frac{\xi}{2}.
-\tag{F1}
 ```
 
 Here $`\gamma`$ is the ideal spectral-estimation failure probability, and $`\xi`$ bounds the **unhalved** diamond distance between the implemented measurement channel and that ideal circuit. The circuit does not need the eigenvectors or eigenvalues of $`\rho`$ in classical form.
@@ -31,12 +32,13 @@ T_{\rm tot}=\sum_{j=1}^{K}T_j=r(L-1).
 
 For any allocated simulation error $`\xi_{\rm sim} \gt 0`$, it suffices to supply
 
+**Equation (F1a).**
+
 ```math
 n_j=\left\lceil\frac{4T_jT_{\rm tot}}{\xi_{\rm sim}}\right\rceil,
 \qquad
 N=\sum_{j=1}^{K}n_j
 \le\frac{4T_{\rm tot}^2}{\xi_{\rm sim}}+K
-\tag{F1a}
 ```
 
 copies, and to approximate the remaining known gates with total unhalved diamond error at most $`\xi_{\rm gate}`$. Then $`\xi\le\xi_{\rm sim}+\xi_{\rm gate}`$. The ceiling bound can be replaced by a strict inequality when its right side is nonintegral; the displayed nonstrict bound is valid.
@@ -45,22 +47,24 @@ copies, and to approximate the remaining known gates with total unhalved diamond
 
 Let $`\rho=\sum_i\lambda_i|i\rangle\langle i|`$ and $`p_i=|\langle i|\psi\rangle|^2`$. The contamination promise implies
 
+**Equation (1).**
+
 ```math
 aP\le\rho,
 \qquad
 \sum_{i:\lambda_i \gt 0}\frac{p_i}{\lambda_i}\le\frac1a,
 \qquad
 p_i=0\ \text{if}\ \lambda_i=0.
-\tag{1}
 ```
 
 The ideal phase-estimation circuit has a diagonal acceptance effect $`F=f(\rho)`$ with
+
+**Equation (2).**
 
 ```math
 0\le f(\lambda)\le1,\qquad
 f(\lambda)\le\gamma\quad(\lambda\le t),\qquad
 f(\lambda)\ge1-\gamma\quad(\lambda\ge2t).
-\tag{2}
 ```
 
 No restriction is needed inside the transition interval $`(t,2t)`$. Equation (1) gives
@@ -84,11 +88,12 @@ The risk is half the sum of these two error probabilities. An unhalved diamond p
 
 For an eigenstate with eigenvalue $`\lambda\in[0,1]`$, one standard phase-estimation round produces an outcome $`z\in\{0,\ldots,L-1\}`$ with probability
 
+**Equation (3).**
+
 ```math
 \Pr(z\mid\lambda)
 =\left|\frac1L\sum_{\ell=0}^{L-1}
 e^{i\ell(\lambda-2\pi z/L)}\right|^2.
-\tag{3}
 ```
 
 Interpret $`2\pi z/L`$ in $`[-\pi,\pi)`$, then clip the result to $`[0,1]`$. Call this estimate $`\widehat\lambda`$. Let $`z_0`$ be a nearest phase-grid point to $`\lambda`$. If $`z`$ has circular grid-index distance $`j\ge1`$ from $`z_0`$, its phase distance is at least $`(2\pi/L)(j-1/2)`$. Using $`|\sin(x/2)|\ge|x|/\pi`$ for $`|x|\le\pi`$ in the geometric sum gives
@@ -99,10 +104,11 @@ Interpret $`2\pi z/L`$ in $`[-\pi,\pi)`$, then clip the result to $`[0,1]`$. Cal
 
 There are at most two outcomes at each positive distance. Therefore the total probability of $`j\ge10`$ is at most
 
+**Equation (4).**
+
 ```math
 \frac12\sum_{j=10}^{\infty}\frac1{(j-1/2)^2}
 \le\frac1{17}.
-\tag{4}
 ```
 
 For the remaining outcomes, the phase error is below $`20\pi/L\le5t/16 \lt t/2`$. Unwrapping and clipping do not increase this error, since the true eigenvalue lies in $`[0,1]`$ and this interval is separated from the phase branch cut. Thus a round estimates $`\lambda`$ to error strictly below $`t/2`$ with failure probability at most $`1/17`$.
@@ -137,25 +143,28 @@ The physical one-copy map and the desired one-step channel are
 
 Their zeroth- and first-order terms agree:
 
+**Equation (5).**
+
 ```math
 \mathrm{Tr}_B[H,X\otimes\rho]
 =[H_{\rm eff},X].
-\tag{5}
 ```
 
 This identity also holds when $`X`$ includes an arbitrary untouched reference. Both Hamiltonians have operator norm at most one. The second-order integral remainder of either unitary channel has diamond norm at most $`2h^2`$: its commutator generator has diamond norm at most two, while unitary channels, tensoring with a state, and partial trace have diamond norm one. Consequently
 
+**Equation (6).**
+
 ```math
-\|\Phi_h-\mathcal U_h\|_\diamond\le4h^2.
-\tag{6}
+‖\Phi_h-\mathcal U_h‖_\diamond\le4h^2.
 ```
 
 This bound holds for real $`h`$, with either sign. Composing $`n`$ fresh-copy steps of size $`h=T/n`$ and using a channel hybrid gives
 
+**Equation (7).**
+
 ```math
-\left\|\Phi_{T/n}^{,n}-\mathcal U_T\right\|_\diamond
+\left‖\Phi_{T/n}^{,n}-\mathcal U_T\right‖_\diamond
 \le\frac{4T^2}{n}.
-\tag{7}
 ```
 
 The ideal phase-estimation circuit uses positive exponents $`e^{+i\rho T_j}`$. For each such segment, take the physical step $`h=-T_j/n_j`$ in (6). Apply (7), with this sign change, to every controlled evolution in phase estimation. The allocation (F1a) makes the sum of the simulation errors at most $`\xi_{\rm sim}`$. Measurements, classical median processing, and adaptive control do not enlarge the hybrid bound. The construction uses only the stored independent program copies. Correlations created among the remaining test and work registers are already covered by the diamond norm.
@@ -172,13 +181,14 @@ d\ge\frac8{a\varepsilon^2}.
 
 Take $`t=a\varepsilon/4`$, $`\gamma=\varepsilon/4`$, and allocate $`\xi_{\rm sim}=\xi_{\rm gate}=\varepsilon/4`$. Then (F1) gives
 
+**Equation (F2).**
+
 ```math
 R\le\varepsilon,
 \qquad
 N=O\!\left(
 \frac{\log^2(1/\varepsilon)}{a^2\varepsilon^3}
 \right).
-\tag{F2}
 ```
 
 The constants are universal and an explicit finite copy allocation is (F1a). At fixed $`a \gt 0`$ and fixed risk, the number of training copies does not depend on $`d`$. In particular, the clean target need not be the majority component. This is one clean-test prediction against the known maximally mixed background; it is not recovery of the clean target state or identification of which mixture component was clean.
@@ -201,6 +211,8 @@ There is no contribution from the largest eigenvector below $`2t`$. Thus
 
 Moreover at most $`b/t`$ nonprincipal eigenvalues exceed $`t`$. The same finite circuit therefore satisfies the more precise bound
 
+**Equation (F3).**
+
 ```math
 R-\frac1{2d}
 \le
@@ -208,7 +220,6 @@ R-\frac1{2d}
 +\gamma+\frac\xi2
 \le\frac{2\eta t}{a^2}+\frac\eta{2dt}
 +\gamma+\frac\xi2.
-\tag{F3}
 ```
 
 This statement uses no knowledge of $`v`$ or $`b`$ in the implementation; its final bound depends only on the promised contamination level.
@@ -221,13 +232,14 @@ d\ge\frac{16\eta^2}{a^2\varepsilon^2},
 
 choose $`t=a^2\varepsilon/(8\eta)`$ and the same error allocation as in F2. Then $`t\le a/4`$ and
 
+**Equation (F3a).**
+
 ```math
 R\le\frac1{2d}+\varepsilon,
 \qquad
 N=O\!\left(
 \frac{\eta^2\log^2(1/\varepsilon)}{a^4\varepsilon^3}
 \right).
-\tag{F3a}
 ```
 
 The required precision is above a constant multiple of $`\eta/\sqrt d`$, consistent with the exact information floor. The displayed sample order is an achievable upper bound, not an optimal finite-copy law.
@@ -249,11 +261,12 @@ Hence $`1-|\langle\psi|v_1\rangle|^2\le\eta^2/a^2`$. The top-eigenvector project
 
 Here the top eigenvalue is at least $`3/4`$ and the remaining ones at most $`1/4`$. The phase-estimation filter with $`t=1/4`$ therefore approximates this projector with a constant spectral separation. Allocating spectral failure and implementation error to a total risk increment $`\delta\in(0,1/4]`$ gives
 
+**Equation (F3b).**
+
 ```math
 R\le\frac1{2d}+\frac{\eta^2}{2a^2}+\delta,
 \qquad
 N=O\!\left(\delta^{-1}\log^2(1/\delta)\right).
-\tag{F3b}
 ```
 
 For $`\eta=0`$ this recovers the clean inverse-precision order up to logarithms. F3b is useful above the $`O(\eta^2)`$ ambiguity scale; F3a addresses finer precision when the dimension permits it.

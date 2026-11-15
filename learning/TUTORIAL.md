@@ -93,7 +93,7 @@ For the qubit training state above, choose the effect $`E=|0\rangle\langle0|`$. 
 | Decision | Clean-test rejection | Background acceptance | Equal-prior error |
 |---|---|---|---|
 | Known-target oracle $`E=P`$ | $`0`$ | $`1/2`$ | $`0.25`$ |
-| Robust effect $`E=|0\rangle\langle0|`$ | $`q`$ | $`1/2`$ | $`1/4+q/2\approx0.2515480025`$ |
+| Robust effect $`E=\vert 0\rangle\langle0\vert `$ | $`q`$ | $`1/2`$ | $`1/4+q/2\approx0.2515480025`$ |
 
 The distinction between risk and excess risk is visible here. The total robust error is about $`0.251548`$; the contamination excess above the oracle is about $`0.001548`$. The example attains the exact worst-case perfect-training risk at these parameters, as the general law below shows.
 

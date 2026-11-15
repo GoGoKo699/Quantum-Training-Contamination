@@ -39,7 +39,7 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/math-dependencies/node_modules
           SOURCE_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          node verification/hosted_math/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE" --repository "$GITHUB_REPOSITORY" --revision "$SOURCE_SHA" --output "$RUNNER_TEMP/hosted-math"
+          node verification/hosted_math/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE" --repository "$GITHUB_REPOSITORY" --revision "$SOURCE_SHA" --output "$RUNNER_TEMP/hosted-math" --contract verification/hosted_math/text_contract.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -224,7 +224,7 @@ R_N^{\mathrm C}(d,a)\ge R_N^{\mathrm Q}(d,a)\ge R_\infty(d,a),
 The lower inequalities hold because every classical compiler is a coherent learner and knowing $`\rho`$ exactly is at least as informative as receiving finitely many copies. For the upper direction, informationally complete tomography at fixed dimension supplies a normalized positive estimator $`\widehat\rho`$ with
 
 ```math
-\|\widehat\rho-\rho\|_\infty\le\delta
+‖\widehat\rho-\rho‖_\infty\le\delta
 ```
 
 except with probability $`\zeta`$, uniformly over all density matrices, once sufficiently many copies are used. This follows, for example, by estimating a finite Hermitian operator basis with independent bounded measurements and projecting the reconstructed matrix onto the density matrices. At fixed $`d`$ the reconstruction is a continuous finite-dimensional linear operation; increasing repetitions makes both the norm error and the failure probability arbitrarily small.
@@ -330,7 +330,7 @@ At the root $`\beta=S_d(q)-1\ge q(\sqrt d-1)`$, so $`q=O_a(d^{-1/2})`$. Substitu
 The prediction floor can vanish with dimension even while clean-state reconstruction remains ambiguous by a constant amount. Let $`\eta=1-a \gt 0`$ and choose two pure states $`P,Q`$ with trace distance
 
 ```math
-D(P,Q)=\frac12\|P-Q\|_1
+D(P,Q)=\frac12‖P-Q‖_1
 =t:=\min\left\{1,\frac\eta a\right\}.
 ```
 

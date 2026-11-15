@@ -8,3 +8,5 @@ The collector and checker are an unchanged matched tool pair (SHA256 values belo
 | --- | --- |
 | `capture_hosted_math.cjs` | `c96f5c769ef62711137fc4d75e110cfb40c0db149c87590cdfb463b69a648b54` |
 | `check_rendered_math.py` | `edbc2d72af94e96b78166d74b66fcea150134f2f3ebaaea121e9057768e1dbfe` |
+
+The full-page command also checks `text_contract.json`: exact expected text and source-expression hashes for headline displays and repaired notation. Intentional formula edits require refreshing the corresponding contract; it cannot waive a structural or source check.
