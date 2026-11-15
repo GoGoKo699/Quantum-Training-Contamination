@@ -30,7 +30,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** background/preliminaries.
 - **Central question:** How does one effect turn the two test hypotheses into a classification risk?
-- **Understanding target:** Derive the two conditional errors and their equal-prior average $`R(E,P)=[1-\operatorname{tr}(EP)+\operatorname{tr}(E)/d]/2`$. Explain why a known clean state permits the oracle error $`1/(2d)`$.
+- **Understanding target:** Derive the two conditional errors and their equal-prior average $`R(E,P)=[1-\mathrm{tr}(EP)+\mathrm{tr}(E)/d]/2`$. Explain why a known clean state permits the oracle error $`1/(2d)`$.
 - **Dependencies and story role:** M01, M02; this attaches a concrete output and performance criterion to the source.
 - **Conceptual connection:** Measurement effects make the tradeoff between missed clean tests and accepted background directions explicit. Total risk and excess above the oracle are different quantities.
 - **Source pointers:** Watrous §2.3.1 and §3.1.1, Theorem 3.4; [model: learners and risks](../science/model.md#learners-and-risks); [precision floor: opening risk definition](../science/precision_floor.md).
@@ -57,7 +57,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** background/preliminaries.
 - **Central question:** How does optimizing a binary measurement become a trace norm, and when does it become classical total variation?
-- **Understanding target:** Explain the Helstrom variational principle and its reduction to $`\operatorname{TV}(p,u_d)`$ for diagonal states. Keep the factors of two in contrast, trace distance and equal-prior risk consistent.
+- **Understanding target:** Explain the Helstrom variational principle and its reduction to $`\mathrm{TV}(p,u_d)`$ for diagonal states. Keep the factors of two in contrast, trace distance and equal-prior risk consistent.
 - **Dependencies and story role:** M03, M05; this connects local effects to the scalar objective that appears in the main proof.
 - **Conceptual connection:** Quantum and classical discrimination share a variational structure, while the set of admissible clean states can remain genuinely quantum.
 - **Source pointers:** Watrous §3.1.1, Theorems 3.4 and 3.7; [precision floor: scalar decision reduction](../science/precision_floor.md#from-quantum-compatibility-to-a-scalar-decision-problem).
@@ -122,7 +122,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** How does positive domination become an exact condition on the clean state’s eigenbasis amplitudes?
-- **Understanding target:** Derive $`aP\preceq\rho\iff\sum_{\lambda_i>0}p_i/\lambda_i\le1/a`$, with zero amplitude outside the support. Explain why purity is essential to this rank-one inverse criterion.
+- **Understanding target:** Derive $`aP\preceq\rho\iff\sum_{\lambda_i \gt 0}p_i/\lambda_i\le1/a`$, with zero amplitude outside the support. Explain why purity is essential to this rank-one inverse criterion.
 - **Dependencies and story role:** M04, M05, M12; this is the first local step of the operational reduction.
 - **Conceptual connection:** Conjugating by the support inverse square root replaces a matrix inequality by the only nonzero eigenvalue of a rank-one operator.
 - **Source pointers:** Watrous §§1.1.2–1.1.3; [precision floor: scalar decision reduction](../science/precision_floor.md#from-quantum-compatibility-to-a-scalar-decision-problem).
@@ -140,7 +140,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** Why is the optimal contrast at known $`\rho`$ the smallest total variation from uniform among its compatible amplitude distributions?
-- **Understanding target:** Identify $`K_\lambda`$, the effect cube $`[0,1]^d`$ and their bilinear payoff. Justify minimax and derive $`g_a(\lambda)=\min_{p\in K_\lambda}\operatorname{TV}(p,u_d)`$, retaining the risk conversion $`(1-g_a)/2`$.
+- **Understanding target:** Identify $`K_\lambda`$, the effect cube $`[0,1]^d`$ and their bilinear payoff. Justify minimax and derive $`g_a(\lambda)=\min_{p\in K_\lambda}\mathrm{TV}(p,u_d)`$, retaining the risk conversion $`(1-g_a)/2`$.
 - **Dependencies and story role:** M06, M08, M14; this completes the fixed-source decision reduction before optimizing the contaminating source.
 - **Conceptual connection:** The trace-norm discrimination principle acts on the convexified compatible alternatives, not on an arbitrarily chosen single reconstruction of the target.
 - **Source pointers:** Watrous §1.2.1, Theorem 1.12, and §3.1.1, Theorems 3.4 and 3.7; [precision floor: scalar decision reduction](../science/precision_floor.md#from-quantum-compatibility-to-a-scalar-decision-problem).
@@ -167,7 +167,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** How does the scalar frontier determine the exact finite-dimension irreducible prediction error?
-- **Understanding target:** Read $`S_d(q_d(a))=a^{-1/2}`$ and $`R_\infty=(1/d+q_d(a))/2`$, explain continuity at grid boundaries, and handle $`a=1`$, $`a=1/d`$ and $`a<1/d`$ correctly. Keep total error distinct from $`q_d(a)/2`$ excess.
+- **Understanding target:** Read $`S_d(q_d(a))=a^{-1/2}`$ and $`R_\infty=(1/d+q_d(a))/2`$, explain continuity at grid boundaries, and handle $`a=1`$, $`a=1/d`$ and $`a \lt 1/d`$ correctly. Keep total error distinct from $`q_d(a)/2`$ excess.
 - **Dependencies and story role:** M15, M16, M17; this assembles the first global result of the narrative.
 - **Conceptual connection:** The operational robust game and inherited entropy geometry now give one optimal information limit with explicit boundary conventions.
 - **Source pointers:** [Precision floor: exact law](../science/precision_floor.md#exact-law-including-the-endpoints) and [entropy-frontier proof](../science/precision_floor.md#evaluating-the-inherited-entropy-frontier); [model: perfect-density information](../science/model.md#perfect-density-information-and-its-asymptotic-meaning).
@@ -176,7 +176,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** Which actual target–contaminant pairs force the exact lower bound, even after arbitrary collective training?
-- **Understanding target:** Construct the finite Fourier-phase targets, common spectrum $`\lambda_i\propto\sqrt{p_i}`$ and positive normalized contaminants. Explain why every training input is identical while the average clean test becomes $`\operatorname{diag}(p)`$.
+- **Understanding target:** Construct the finite Fourier-phase targets, common spectrum $`\lambda_i\propto\sqrt{p_i}`$ and positive normalized contaminants. Explain why every training input is identical while the average clean test becomes $`\mathrm{diag}(p)`$.
 - **Dependencies and story role:** M05, M13, M16, M18; this turns an optimized scalar value into an operational impossibility witness.
 - **Conceptual connection:** Ensemble nonuniqueness is used to build explicit compatible physical instances, and Helstrom discrimination converts their average test state into the exact risk.
 - **Source pointers:** Watrous §4.3.2 for ensemble foundations and §3.1.1 for discrimination; [precision floor: finite least-favorable family](../science/precision_floor.md#a-finite-least-favorable-family-of-indistinguishable-sources).

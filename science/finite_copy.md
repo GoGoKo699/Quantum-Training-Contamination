@@ -6,14 +6,14 @@ The input is $`N`$ independent copies of
 
 ```math
 \rho=aP+(1-a)\sigma,\qquad
-P=|\psi\rangle\langle\psi|,\qquad 0<a\le1.
+P=|\psi\rangle\langle\psi|,\qquad 0 \lt a\le1.
 ```
 
 All training copies arrive before the test. The learner retains them, then consumes them while classifying one test drawn with equal prior probabilities from $`P`$ or $`I/d`$. There is no post-test source access. The output is one classical label. The [resource account](resources.md) includes the stored training registers and the cost of preparing every supplied copy.
 
 ## F1: a spectral classifier without a gap promise
 
-Let $`0<t\le1/4`$, $`0<\gamma<1/2`$, and $`\xi>0`$. There is a finite circuit with classification risk
+Let $`0 \lt t\le1/4`$, $`0 \lt \gamma \lt 1/2`$, and $`\xi \gt 0`$. There is a finite circuit with classification risk
 
 ```math
 R\le \frac{t}{a}+\frac{1}{2dt}+\gamma+\frac{\xi}{2}.
@@ -29,7 +29,7 @@ K=rm,\qquad
 T_{\rm tot}=\sum_{j=1}^{K}T_j=r(L-1).
 ```
 
-For any allocated simulation error $`\xi_{\rm sim}>0`$, it suffices to supply
+For any allocated simulation error $`\xi_{\rm sim} \gt 0`$, it suffices to supply
 
 ```math
 n_j=\left\lceil\frac{4T_jT_{\rm tot}}{\xi_{\rm sim}}\right\rceil,
@@ -48,7 +48,7 @@ Let $`\rho=\sum_i\lambda_i|i\rangle\langle i|`$ and $`p_i=|\langle i|\psi\rangle
 ```math
 aP\le\rho,
 \qquad
-\sum_{i:\lambda_i>0}\frac{p_i}{\lambda_i}\le\frac1a,
+\sum_{i:\lambda_i \gt 0}\frac{p_i}{\lambda_i}\le\frac1a,
 \qquad
 p_i=0\ \text{if}\ \lambda_i=0.
 \tag{1}
@@ -66,15 +66,15 @@ f(\lambda)\ge1-\gamma\quad(\lambda\ge2t).
 No restriction is needed inside the transition interval $`(t,2t)`$. Equation (1) gives
 
 ```math
-\operatorname{Tr}[(I-F)P]
-\le\sum_{\lambda_i<2t}p_i+\gamma
+\mathrm{Tr}[(I-F)P]
+\le\sum_{\lambda_i \lt 2t}p_i+\gamma
 \le\frac{2t}{a}+\gamma.
 ```
 
-At most $`1/t`$ eigenvalues exceed $`t`$, because $`\operatorname{Tr}\rho=1`$. Hence
+At most $`1/t`$ eigenvalues exceed $`t`$, because $`\mathrm{Tr}\rho=1`$. Hence
 
 ```math
-\frac{\operatorname{Tr}F}{d}
+\frac{\mathrm{Tr}F}{d}
 \le\frac1{dt}+\gamma.
 ```
 
@@ -105,7 +105,7 @@ There are at most two outcomes at each positive distance. Therefore the total pr
 \tag{4}
 ```
 
-For the remaining outcomes, the phase error is below $`20\pi/L\le5t/16<t/2`$. Unwrapping and clipping do not increase this error, since the true eigenvalue lies in $`[0,1]`$ and this interval is separated from the phase branch cut. Thus a round estimates $`\lambda`$ to error strictly below $`t/2`$ with failure probability at most $`1/17`$.
+For the remaining outcomes, the phase error is below $`20\pi/L\le5t/16 \lt t/2`$. Unwrapping and clipping do not increase this error, since the true eigenvalue lies in $`[0,1]`$ and this interval is separated from the phase branch cut. Thus a round estimates $`\lambda`$ to error strictly below $`t/2`$ with failure probability at most $`1/17`$.
 
 Conditional on an eigenstate, repeated ideal rounds leave that eigenstate unchanged and use fresh phase registers. Hoeffding's inequality bounds the probability that a majority of the $`r`$ rounds fail by
 
@@ -121,7 +121,7 @@ Accept when the median estimate exceeds $`3t/2`$. An eigenvalue at most $`t`$ is
 The simulator uses known swap gates; it does not assume controlled access to an unknown unitary. Let $`C`$ be a control qubit, $`A`$ the test, and $`B`$ one training register in state $`\rho`$. Put
 
 ```math
-H=|1\rangle\langle1|_C\otimes\operatorname{SWAP}_{AB},
+H=|1\rangle\langle1|_C\otimes\mathrm{SWAP}_{AB},
 \qquad
 H_{\rm eff}=|1\rangle\langle1|_C\otimes\rho_A.
 ```
@@ -129,7 +129,7 @@ H_{\rm eff}=|1\rangle\langle1|_C\otimes\rho_A.
 The physical one-copy map and the desired one-step channel are
 
 ```math
-\Phi_h(X)=\operatorname{Tr}_B
+\Phi_h(X)=\mathrm{Tr}_B
 \left[e^{-ihH}(X\otimes\rho_B)e^{ihH}\right],
 \qquad
 \mathcal U_h(X)=e^{-ihH_{\rm eff}}Xe^{ihH_{\rm eff}}.
@@ -138,7 +138,7 @@ The physical one-copy map and the desired one-step channel are
 Their zeroth- and first-order terms agree:
 
 ```math
-\operatorname{Tr}_B[H,X\otimes\rho]
+\mathrm{Tr}_B[H,X\otimes\rho]
 =[H_{\rm eff},X].
 \tag{5}
 ```
@@ -164,7 +164,7 @@ Density-matrix exponentiation and its dimension-independent sample order are inh
 
 ## F2: arbitrary positive clean fraction
 
-For $`0<\varepsilon\le1/4`$, suppose
+For $`0 \lt \varepsilon\le1/4`$, suppose
 
 ```math
 d\ge\frac8{a\varepsilon^2}.
@@ -181,7 +181,7 @@ N=O\!\left(
 \tag{F2}
 ```
 
-The constants are universal and an explicit finite copy allocation is (F1a). At fixed $`a>0`$ and fixed risk, the number of training copies does not depend on $`d`$. In particular, the clean target need not be the majority component. This is one clean-test prediction against the known maximally mixed background; it is not recovery of the clean target state or identification of which mixture component was clean.
+The constants are universal and an explicit finite copy allocation is (F1a). At fixed $`a \gt 0`$ and fixed risk, the number of training copies does not depend on $`d`$. In particular, the clean target need not be the majority component. This is one clean-test prediction against the known maximally mixed background; it is not recovery of the clean target state or identification of which mixture component was clean.
 
 ## F3: dependence on a small contamination fraction
 
@@ -195,7 +195,7 @@ Write $`\eta=1-a`$ and assume $`0\le\eta\le1/4`$. Let $`v=\lambda_1(\rho)`$ and 
 There is no contribution from the largest eigenvector below $`2t`$. Thus
 
 ```math
-\sum_{\lambda_i<2t}p_i
+\sum_{\lambda_i \lt 2t}p_i
 \le\frac{2t(v-a)}{a(v-2t)}.
 ```
 
@@ -213,7 +213,7 @@ R-\frac1{2d}
 
 This statement uses no knowledge of $`v`$ or $`b`$ in the implementation; its final bound depends only on the promised contamination level.
 
-For $`0<\eta\le1/4`$, $`0<\varepsilon\le\eta^2`$, and
+For $`0 \lt \eta\le1/4`$, $`0 \lt \varepsilon\le\eta^2`$, and
 
 ```math
 d\ge\frac{16\eta^2}{a^2\varepsilon^2},

@@ -15,7 +15,7 @@ The clean target is a hidden pure state $`P=|\psi\rangle\langle\psi|`$ in dimens
 \qquad a=1-\eta.
 ```
 
-The clean fraction $`a>0`$ is known. The contaminant $`\sigma`$ is an arbitrary fixed density matrix and may depend on $`P`$. A training specimen has no flag saying which part of this mixture produced it. Its accessible state is $`\rho`$, not a labeled pair consisting of a mixture component and a state.
+The clean fraction $`a \gt 0`$ is known. The contaminant $`\sigma`$ is an arbitrary fixed density matrix and may depend on $`P`$. A training specimen has no flag saying which part of this mixture produced it. Its accessible state is $`\rho`$, not a labeled pair consisting of a mixture component and a state.
 
 All training specimens arrive before one test. The test has equal prior probabilities of being $`P`$ or the known background $`I_d/d`$. The positive test is clean; contamination affects training alone. The learner returns one classical label and may consume the specimens.
 
@@ -79,11 +79,11 @@ Consequently no training measurement can determine which sign was clean. Giving 
 
 ## A decision has two error terms
 
-**Milestones M06–M12.** A binary quantum decision is an effect $`0\le E\le I_d`$. Its acceptance probability on a state $`\tau`$ is $`\operatorname{Tr}(E\tau)`$. For the present equal-prior test its error is
+**Milestones M06–M12.** A binary quantum decision is an effect $`0\le E\le I_d`$. Its acceptance probability on a state $`\tau`$ is $`\mathrm{Tr}(E\tau)`$. For the present equal-prior test its error is
 
 ```math
-R(E,P)=\frac{1-\operatorname{Tr}(EP)}2
-       +\frac{\operatorname{Tr}E}{2d}.
+R(E,P)=\frac{1-\mathrm{Tr}(EP)}2
+       +\frac{\mathrm{Tr}E}{2d}.
 ```
 
 The first term is rejection of a clean test. The second is acceptance of the background. If the target were known, taking $`E=P`$ would never reject it and would accept the background with probability $`1/d`$. The oracle error is therefore $`R_\star=1/(2d)`$.
@@ -108,7 +108,7 @@ Write $`\rho=\sum_i\lambda_i|i\rangle\langle i|`$ and $`p_i=|\langle i|\psi\rang
 ```math
 a\,\rho^{-1/2}P\rho^{-1/2}\le I
 \quad\Longleftrightarrow\quad
-\sum_{i:\lambda_i>0}\frac{p_i}{\lambda_i}\le\frac1a.
+\sum_{i:\lambda_i \gt 0}\frac{p_i}{\lambda_i}\le\frac1a.
 ```
 
 A target has no weight in a zero-eigenvalue direction. Every feasible probability vector $`p`$ can have arbitrary phases in the eigenbasis. Thus the training spectrum constrains possible target amplitudes without revealing those phases.
@@ -120,11 +120,11 @@ At a fixed spectrum, convex minimax then turns the best robust contrast into
 ```math
 g_a(\lambda)
 =\min_{\substack{p\in\Delta_d\\\sum_i p_i/\lambda_i\le1/a}}
-\operatorname{TV}(p,u_d),
+\mathrm{TV}(p,u_d),
 \qquad u_d=(1/d,\ldots,1/d).
 ```
 
-The optimal error at this training state is $`(1-g_a(\lambda))/2`$. Total variation appears because, once $`p`$ is fixed, the best diagonal effect accepts coordinates where $`p_i>1/d`$. This is the classical form of the binary discrimination calculation, reached after respecting the quantum compatibility and symmetry.
+The optimal error at this training state is $`(1-g_a(\lambda))/2`$. Total variation appears because, once $`p`$ is fixed, the best diagonal effect accepts coordinates where $`p_i \gt 1/d`$. This is the classical form of the binary discrimination calculation, reached after respecting the quantum compatibility and symmetry.
 
 The adversary may also choose the training spectrum. For fixed $`p`$, Cauchy–Schwarz gives
 
@@ -155,7 +155,7 @@ Its square-root sum is
 S_d(q)=\sqrt{1-q}+\frac{k}{\sqrt d}+\sqrt{q-k/d}.
 ```
 
-For $`a>1/d`$, the unique root $`S_d(q_d(a))=a^{-1/2}`$ gives
+For $`a \gt 1/d`$, the unique root $`S_d(q_d(a))=a^{-1/2}`$ gives
 
 ```math
 R_\infty(d,a)=\frac{1/d+q_d(a)}2,
@@ -172,7 +172,7 @@ q_2(1-\eta)
 
 At $`\eta=1/10`$ this is exactly the chosen $`q`$. The formula is used only when the root lies in the first interval; the scalar definition handles the other cases.
 
-The root is not merely an optimization without a physical witness. Given $`p^\star`$, choose $`\lambda_i\propto\sqrt{p_i^\star}`$ and take a finite Fourier family of clean vectors with those amplitudes. Averaging their phases gives $`\operatorname{diag}(p^\star)`$. Each clean vector has a positive contaminant making the training density matrix equal to the same $`\rho`$. For two nonzero coordinates this finite family is precisely the two signs used above. Binary discrimination of its averaged clean test from $`I_d/d`$ gives the stated error lower bound. The robust minimax effect supplies the matching upper bound.
+The root is not merely an optimization without a physical witness. Given $`p^\star`$, choose $`\lambda_i\propto\sqrt{p_i^\star}`$ and take a finite Fourier family of clean vectors with those amplitudes. Averaging their phases gives $`\mathrm{diag}(p^\star)`$. Each clean vector has a positive contaminant making the training density matrix equal to the same $`\rho`$. For two nonzero coordinates this finite family is precisely the two signs used above. Binary discrimination of its averaged clean test from $`I_d/d`$ gives the stated error lower bound. The robust minimax effect supplies the matching upper bound.
 
 At $`a\le1/d`$, the common training state $`I_d/d`$ is compatible with every pure target, and the minimax error is $`1/2`$. At $`a=1`$, the limit is the oracle value. For each fixed $`d,a`$, both coherent and classical-compilation risks converge to $`R_\infty`$ as $`N\to\infty`$. Tomography can eventually estimate the common density matrix, even though it cannot identify a decomposition that the density matrix itself does not specify. This limiting statement gives no dimension-uniform sample rate.
 
@@ -183,7 +183,7 @@ At $`a\le1/d`$, the common training state $`I_d/d`$ is compatible with every pur
 ```math
 R_\infty(d,1-\eta)-\frac1{2d}
 =\Theta\!\left(\min\left\{\eta^2,\frac\eta{\sqrt d}\right\}\right),
-\qquad 0<\eta\le1/4.
+\qquad 0 \lt \eta\le1/4.
 ```
 
 At each fixed $`a\in(0,1)`$, the large-dimension expansion is
@@ -204,7 +204,7 @@ R_\infty^{\rm comm}(d,a)
 =\frac{\min\{d,\lfloor1/a\rfloor\}}{2d}.
 ```
 
-No common basis is supplied in this comparison. It changes only the contamination promise. For $`a>1/2`$, the clean eigendirection is unique and there is no contamination excess. The qubit example uses noncommuting contaminants and thus exhibits a positive excess that the commuting promise excludes.
+No common basis is supplied in this comparison. It changes only the contamination promise. For $`a \gt 1/2`$, the clean eigendirection is unique and there is no contamination excess. The qubit example uses noncommuting contaminants and thus exhibits a positive excess that the commuting promise excludes.
 
 Recognition can also succeed when reconstruction cannot. Two distinct pure targets can share a training density matrix while remaining a constant trace distance apart. An estimator of the clean state must then be wrong for at least one of them. A classifier has the different option of covering uncertain directions at a background cost proportional to their dimension. [The reconstruction comparison](../science/precision_floor.md#recognition-does-not-require-reconstructing-the-clean-state) proves this distinction quantitatively; it does not infer recovery from a good label predictor.
 

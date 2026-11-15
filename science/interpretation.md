@@ -65,7 +65,7 @@ R_\infty^{\mathrm{comm}}(d,a)
 =\frac{\min\{d,\lfloor1/a\rfloor\}}{2d}.
 ```
 
-For $`a>1/2`$, the clean direction is unique and this risk equals the oracle error. General contamination permits clean vectors that are not eigenvectors of $`\rho`$, producing positive excess even below that contamination level. At every fixed $`a\in(0,1)`$, the commuting risk has order $`d^{-1}`$ and the unrestricted risk has order $`d^{-1/2}`$. The comparison isolates a cost of nonorthogonal mixture decompositions, rather than a difference in supplied classical descriptions or computational power.
+For $`a \gt 1/2`$, the clean direction is unique and this risk equals the oracle error. General contamination permits clean vectors that are not eigenvectors of $`\rho`$, producing positive excess even below that contamination level. At every fixed $`a\in(0,1)`$, the commuting risk has order $`d^{-1}`$ and the unrestricted risk has order $`d^{-1/2}`$. The comparison isolates a cost of nonorthogonal mixture decompositions, rather than a difference in supplied classical descriptions or computational power.
 
 ## What the finite-copy comparison says
 

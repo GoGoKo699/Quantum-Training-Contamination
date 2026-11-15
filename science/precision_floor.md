@@ -11,8 +11,8 @@ The experiment and all input charges are specified in [the model](model.md). The
 The contaminant $`\sigma`$ is an arbitrary hidden density matrix and may depend on $`P`$. A single later test is equally likely to be $`P`$ or $`I_d/d`$. An effect $`0\le E\le I_d`$ means “accept the clean class” and has error
 
 ```math
-R(E,P)=\frac{1-\operatorname{tr}(EP)
-                    +\operatorname{tr}(E)/d}{2}.
+R(E,P)=\frac{1-\mathrm{tr}(EP)
+                    +\mathrm{tr}(E)/d}{2}.
 ```
 
 If $`P`$ is known, $`E=P`$ is optimal and its error is $`R_*(d)=1/(2d)`$. Contamination is confined to training; the positive test is the clean state.
@@ -23,11 +23,11 @@ For a known training density matrix define its compatible clean states by
 
 ```math
 \mathcal P_a(\rho)
-=\{P:\ P\text{ is rank one},\ \operatorname{tr}P=1,
+=\{P:\ P\text{ is rank one},\ \mathrm{tr}P=1,
                    \ aP\le\rho\}.
 ```
 
-For $`a<1`$, the inequality is equivalent to the existence of a density matrix $`\sigma=(\rho-aP)/(1-a)`$. At $`a=1`$, compatibility instead forces $`\rho=P`$. Thus the exact-training benchmark is
+For $`a \lt 1`$, the inequality is equivalent to the existence of a density matrix $`\sigma=(\rho-aP)/(1-a)`$. At $`a=1`$, compatibility instead forces $`\rho=P`$. Thus the exact-training benchmark is
 
 ```math
 R_\infty(d,a)
@@ -54,7 +54,7 @@ S_d(0)=1,
 S_d(1-1/d)=\sqrt d.
 ```
 
-It is strictly increasing on the full interval. If $`1/d<a\le1`$, let $`q_d(a)`$ be the unique solution of
+It is strictly increasing on the full interval. If $`1/d \lt a\le1`$, let $`q_d(a)`$ be the unique solution of
 
 ```math
 S_d\bigl(q_d(a)\bigr)=a^{-1/2}.
@@ -68,7 +68,7 @@ R_\infty(d,a)=\frac{1/d+q_d(a)}{2},
 R_\infty(d,a)-R_*(d)=\frac{q_d(a)}{2}.
 ```
 
-For $`0<a\le1/d`$ the error is $`R_\infty(d,a)=1/2`$. One may extend the notation continuously by setting $`q_d(a)=1-1/d`$ there. At $`a=1`$ one has $`q_d(1)=0`$, recovering the known-state error. At every $`a<1`$ with $`a>1/d`$, the contamination excess is strictly positive.
+For $`0 \lt a\le1/d`$ the error is $`R_\infty(d,a)=1/2`$. One may extend the notation continuously by setting $`q_d(a)=1-1/d`$ there. At $`a=1`$ one has $`q_d(1)=0`$, recovering the known-state error. At every $`a \lt 1`$ with $`a \gt 1/d`$, the contamination excess is strictly positive.
 
 The scalar extremal distribution behind $`S_d`$ is inherited from Rioul’s sharp Rényi-entropy/total-variation inequalities: [Rioul, *Entropy* **25**, 978 (2023), Section 4, Theorem 6 and Example 19, Eq. (96)](https://doi.org/10.3390/e25070978). The proof below reconstructs that scalar fact to make its use transparent. The operational reduction from compatible contaminated quantum sources to that entropy frontier is the result being established here.
 
@@ -79,7 +79,7 @@ Diagonalize $`\rho`$ as $`\rho=\sum_i\lambda_i|i\rangle\langle i|`$. A compatibl
 ```math
 aP\le\rho
 \quad\Longleftrightarrow\quad
-\sum_{i:\lambda_i>0}\frac{p_i}{\lambda_i}\le\frac1a,
+\sum_{i:\lambda_i \gt 0}\frac{p_i}{\lambda_i}\le\frac1a,
 \qquad p_i=0\text{ if }\lambda_i=0.
 ```
 
@@ -92,7 +92,7 @@ The feasible probability vectors form the compact convex set
 ```math
 K_\lambda
 =\left\{p\in\Delta_d:\ p_i=0\text{ if }\lambda_i=0,
-                \ \sum_{\lambda_i>0}\frac{p_i}{\lambda_i}\le\frac1a\right\}.
+                \ \sum_{\lambda_i \gt 0}\frac{p_i}{\lambda_i}\le\frac1a\right\}.
 ```
 
 Every such vector is realized by a compatible pure state, with arbitrary phases. The robust contrast at this spectrum is therefore
@@ -104,17 +104,17 @@ g_a(\lambda)
        \sum_i e_i(p_i-c)\\
 &=\min_{p\in K_\lambda}\max_{e\in[0,1]^d}
        \sum_i e_i(p_i-c)\\
-&=\min_{p\in K_\lambda}\operatorname{TV}(p,u_d).
+&=\min_{p\in K_\lambda}\mathrm{TV}(p,u_d).
 \end{aligned}
 ```
 
-The interchange uses the compact convex bilinear minimax theorem. The final equality follows by setting $`e_i=1`$ on positive coordinates of $`p_i-c`$ and zero on negative ones. Here $`u_d=(c,\ldots,c)`$ and $`\operatorname{TV}(p,u_d)=\frac12\sum_i|p_i-c|`$. The optimal robust error at $`\rho`$ is $`(1-g_a(\lambda))/2`$.
+The interchange uses the compact convex bilinear minimax theorem. The final equality follows by setting $`e_i=1`$ on positive coordinates of $`p_i-c`$ and zero on negative ones. Here $`u_d=(c,\ldots,c)`$ and $`\mathrm{TV}(p,u_d)=\frac12\sum_i|p_i-c|`$. The optimal robust error at $`\rho`$ is $`(1-g_a(\lambda))/2`$.
 
 The outer adversary also chooses $`\lambda`$. For a fixed probability vector, Cauchy–Schwarz gives
 
 ```math
 \left(\sum_i\sqrt{p_i}\right)^2
-\le \left(\sum_{\lambda_i>0}\frac{p_i}{\lambda_i}\right)
+\le \left(\sum_{\lambda_i \gt 0}\frac{p_i}{\lambda_i}\right)
      \left(\sum_i\lambda_i\right).
 ```
 
@@ -130,7 +130,7 @@ Both the spectrum and the compatible vector are minimized in the outer contrast,
 1-2R_\infty(d,a)
 =\min_{\substack{p\in\Delta_d\\
        (\sum_i\sqrt{p_i})^2\le1/a}}
-     \operatorname{TV}(p,u_d).
+     \mathrm{TV}(p,u_d).
 ```
 
 Equivalently, the admissible vectors obey the Rényi-entropy constraint $`H_{1/2}(p)\le-\log a`$, since $`H_{1/2}(p)=2\log\sum_i\sqrt{p_i}`$. The logarithm base does not affect the constraint.
@@ -141,7 +141,7 @@ For any $`p\in\Delta_d`$ put
 
 ```math
 F(p)=\sum_i\min\{p_i,c\}
-     =1-\operatorname{TV}(p,u_d),
+     =1-\mathrm{TV}(p,u_d),
 \qquad q=F(p)-c.
 ```
 
@@ -159,7 +159,7 @@ has the smallest possible square-root sum. Zero entries, including a zero fracti
 To verify the extremal property, sort $`p`$ decreasingly. For every $`j`$,
 
 ```math
-F(p)\le jc+\sum_{i>j}p_i,
+F(p)\le jc+\sum_{i \gt j}p_i,
 \qquad
 \sum_{i\le j}p_i\le\min\{1,1-q+(j-1)c\}.
 ```
@@ -170,17 +170,17 @@ The right side equals the corresponding partial sum of $`p^{\star}(q)`$ until th
 \sum_i\sqrt{p_i}\ge\sum_i\sqrt{p_i^{\star}(q)}=S_d(q).
 ```
 
-Conversely $`p^{\star}(q)`$ attains the stated $`F=c+q`$ and equality. This is the relevant specialization of Rioul’s theorem. On each interval $`k/d<q<(k+1)/d`$ the derivative of $`S_d`$ is
+Conversely $`p^{\star}(q)`$ attains the stated $`F=c+q`$ and equality. This is the relevant specialization of Rioul’s theorem. On each interval $`k/d \lt q \lt (k+1)/d`$ the derivative of $`S_d`$ is
 
 ```math
-S_d'(q)=\frac1{2\sqrt{q-k/d}}-\frac1{2\sqrt{1-q}}>0,
+S_d'(q)=\frac1{2\sqrt{q-k/d}}-\frac1{2\sqrt{1-q}} \gt 0,
 ```
 
 because the fractional coordinate is smaller than the leading coordinate in the interior. Together with the matching one-sided boundary values, this proves continuity and strict increase. Maximizing the feasible $`F`$ now gives the root formula. If $`a\le1/d`$, the uniform vector is feasible and the minimum contrast is zero, completing the endpoint proof.
 
 ## A finite least-favorable family of indistinguishable sources
 
-The lower bound does not require an adversary with a continuously distributed hidden state. Suppose $`1/d<a<1`$, set $`q=q_d(a)`$, and retain the $`s`$ nonzero entries of $`p=p^{\star}(q)`$. Number their basis vectors from zero to $`s-1`$. Define
+The lower bound does not require an adversary with a continuously distributed hidden state. Suppose $`1/d \lt a \lt 1`$, set $`q=q_d(a)`$, and retain the $`s`$ nonzero entries of $`p=p^{\star}(q)`$. Number their basis vectors from zero to $`s-1`$. Define
 
 ```math
 \lambda_j=\frac{\sqrt{p_j}}{\sum_i\sqrt{p_i}},
@@ -190,7 +190,7 @@ The lower bound does not require an adversary with a continuously distributed hi
 |\psi_\ell\rangle
 =\sum_{j=0}^{s-1}\sqrt{p_j}\,
        e^{2\pi i\ell j/s}|j\rangle,
-\quad 0\le\ell<s.
+\quad 0\le\ell \lt s.
 ```
 
 The compatibility expression equals $`1/a`$ for every $`\ell`$. Therefore
@@ -199,12 +199,12 @@ The compatibility expression equals $`1/a`$ for every $`\ell`$. Therefore
 \sigma_\ell=\frac{\rho-a|\psi_\ell\rangle\langle\psi_\ell|}{1-a}
 ```
 
-is positive and has trace one. Every target–contaminant pair emits exactly the same training state $`\rho`$, so even an arbitrarily large collective training measurement cannot reveal $`\ell`$. The uniform average of the clean states is $`\operatorname{diag}(p)`$, because the finite Fourier phases cancel every off-diagonal term.
+is positive and has trace one. Every target–contaminant pair emits exactly the same training state $`\rho`$, so even an arbitrarily large collective training measurement cannot reveal $`\ell`$. The uniform average of the clean states is $`\mathrm{diag}(p)`$, because the finite Fourier phases cancel every off-diagonal term.
 
 For this uniform prior the best possible test has error
 
 ```math
-\frac{1-\operatorname{TV}(p,u_d)}2
+\frac{1-\mathrm{TV}(p,u_d)}2
 =\frac{1/d+q_d(a)}2.
 ```
 
@@ -250,7 +250,7 @@ This argument establishes the order of limits: first $`N\to\infty`$ with $`d,a`$
 
 ## Small contamination, uniformly in dimension
 
-Write $`\eta=1-a`$. There are universal positive constants such that for all $`d\ge2`$ and $`0<\eta\le1/4`$,
+Write $`\eta=1-a`$. There are universal positive constants such that for all $`d\ge2`$ and $`0 \lt \eta\le1/4`$,
 
 ```math
 R_\infty(d,1-\eta)-\frac1{2d}
@@ -327,7 +327,7 @@ At the root $`\beta=S_d(q)-1\ge q(\sqrt d-1)`$, so $`q=O_a(d^{-1/2})`$. Substitu
 
 ## Recognition does not require reconstructing the clean state
 
-The prediction floor can vanish with dimension even while clean-state reconstruction remains ambiguous by a constant amount. Let $`\eta=1-a>0`$ and choose two pure states $`P,Q`$ with trace distance
+The prediction floor can vanish with dimension even while clean-state reconstruction remains ambiguous by a constant amount. Let $`\eta=1-a \gt 0`$ and choose two pure states $`P,Q`$ with trace distance
 
 ```math
 D(P,Q)=\frac12\|P-Q\|_1
@@ -340,7 +340,7 @@ There is one density matrix compatible with both. Indeed,
 B=\frac{P+Q+|P-Q|}{2}
 ```
 
-satisfies $`B\ge P,Q`$ and $`\operatorname{tr}B=1+t`$. Since $`a(1+t)\le1`$, add any positive operator of trace $`1-a(1+t)`$ to $`aB`$ to obtain a normalized $`\rho\ge aP,aQ`$. The associated contaminants are valid and produce the same training state for both targets.
+satisfies $`B\ge P,Q`$ and $`\mathrm{tr}B=1+t`$. Since $`a(1+t)\le1`$, add any positive operator of trace $`1-a(1+t)`$ to $`aB`$ to obtain a normalized $`\rho\ge aP,aQ`$. The associated contaminants are valid and produce the same training state for both targets.
 
 Every density-matrix estimator built from this training source has the same output distribution in the two cases. The trace-distance triangle inequality therefore gives
 
@@ -352,9 +352,9 @@ Every density-matrix estimator built from this training source has the same outp
 For infidelity loss, the largest eigenvalue of $`(P+Q)/2`$ is $`(1+\sqrt{1-t^2})/2`$, giving the additional lower bound
 
 ```math
-\max\left\{\mathbb E[1-\operatorname{tr}(P\widehat\tau)],
-             \mathbb E[1-\operatorname{tr}(Q\widehat\tau)]\right\}
+\max\left\{\mathbb E[1-\mathrm{tr}(P\widehat\tau)],
+             \mathbb E[1-\mathrm{tr}(Q\widehat\tau)]\right\}
 \ge\frac{1-\sqrt{1-t^2}}2.
 ```
 
-These reconstruction bounds hold even with exact $`\rho`$ and for every finite training budget. In contrast, at fixed $`a>0`$ the one-test recognition error tends to zero as $`d\to\infty`$. The distinction is task specific: accepting some extra directions is inexpensive against the known maximally mixed background. It supplies neither recovery of $`P`$ nor a reusable predictor, and need not persist for a different background. [The commuting comparison](commuting_comparison.md) isolates the role of noncommuting contamination within the same supplied-state experiment.
+These reconstruction bounds hold even with exact $`\rho`$ and for every finite training budget. In contrast, at fixed $`a \gt 0`$ the one-test recognition error tends to zero as $`d\to\infty`$. The distinction is task specific: accepting some extra directions is inexpensive against the known maximally mixed background. It supplies neither recovery of $`P`$ nor a reusable predictor, and need not persist for a different background. [The commuting comparison](commuting_comparison.md) isolates the role of noncommuting contamination within the same supplied-state experiment.

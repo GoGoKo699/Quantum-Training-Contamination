@@ -34,8 +34,8 @@ A coherent learner may retain the training systems and use arbitrary known quant
 
 ```math
 R_N(T;P,\sigma)
-=\frac12\operatorname{Tr}[(I-T)(\rho^{\otimes N}\otimes P)]
-+\frac12\operatorname{Tr}[T(\rho^{\otimes N}\otimes\tau_d)].
+=\frac12\mathrm{Tr}[(I-T)(\rho^{\otimes N}\otimes P)]
++\frac12\mathrm{Tr}[T(\rho^{\otimes N}\otimes\tau_d)].
 ```
 
 The minimax risk is
@@ -81,7 +81,7 @@ R_\infty(d,a)
 =\sup_{\rho:\mathcal P_a(\rho)\ne\varnothing}
 \inf_{0\preceq E\preceq I}
 \sup_{P\in\mathcal P_a(\rho)}
-\frac{1-\operatorname{Tr}(EP)+\operatorname{Tr}(E)/d}{2}.
+\frac{1-\mathrm{Tr}(EP)+\mathrm{Tr}(E)/d}{2}.
 ```
 
 This is a lower bound on every finite-copy learner, including coherent learners. Exact density information can simulate any training experiment without disclosing which compatible clean state generated it. Conversely, uniform tomography with a relaxed compatibility constraint proves
@@ -99,7 +99,7 @@ for each fixed $`d,a`$. The proof is in [the exact precision account](precision_
 | Result | Supported statement | Canonical account |
 |---|---|---|
 | Exact contamination limit | The robust prediction problem reduces to the nearest-to-uniform probability vector with $`(\sum_i\sqrt{p_i})^2\le1/a`$. A scalar root gives the exact finite-$`d`$ risk and an explicit least-favorable phase family. | [Precision floor](precision_floor.md) |
-| Small contamination and large dimension | For $`0<\eta\le1/4`$, the unavoidable excess is $`\Theta(\min\{\eta^2,\eta/\sqrt d\})`$. At each fixed $`a\in(0,1)`$, its leading term is $`(a^{-1/2}-1)/(2\sqrt d)`$. | [Scaling and limits](precision_floor.md) |
+| Small contamination and large dimension | For $`0 \lt \eta\le1/4`$, the unavoidable excess is $`\Theta(\min\{\eta^2,\eta/\sqrt d\})`$. At each fixed $`a\in(0,1)`$, its leading term is $`(a^{-1/2}-1)/(2\sqrt d)`$. | [Scaling and limits](precision_floor.md) |
 | Commuting contamination | If $`[\sigma,P]=0`$, the exact perfect-density risk is $`\min\{d,\lfloor1/a\rfloor\}/(2d)`$. | [Commuting comparison](commuting_comparison.md) |
 | Finite-copy construction | A smoothed spectral decision with controlled sample-based simulation achieves explicit error bounds without an eigenvalue-gap promise. Its copy count is independent of $`d`$ at fixed clean fraction and target risk in the stated dimension regime. | [Finite-copy decision](finite_copy.md) |
 | Full charges and comparator | Preparation, all retained samples, known gates, synthesis and the single output are counted. The clean subfamily supplies an inherited $`\Omega(d)`$ classical-compilation lower bound at fixed nontrivial accuracy. | [Resources](resources.md) |

@@ -26,7 +26,7 @@ When $`d`$ is not a power of two, use a known $`d`$-dimensional subspace of the 
 
 ## A finite circuit over known gates
 
-Write $`S=\operatorname{SWAP}_{AB}`$. Since $`S^2=I`$, a partial swap is
+Write $`S=\mathrm{SWAP}_{AB}`$. Since $`S^2=I`$, a partial swap is
 
 ```math
 e^{-ihS}=\cos(h)I-i\sin(h)S.
@@ -85,8 +85,8 @@ The sufficient budgets in [F2 and F3](finite_copy.md) are
 
 | Guarantee | Sufficient dimension regime | Training copies, up to constants |
 |---|---|---|
-| $`R\le\varepsilon`$, every $`a>0`$ | $`d\ge8/(a\varepsilon^2)`$ | $`a^{-2}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
-| $`R\le1/(2d)+\varepsilon`$, $`0<\eta=1-a\le1/4`$, $`\varepsilon\le\eta^2`$ | $`d\ge16\eta^2/(a^2\varepsilon^2)`$ | $`\eta^2a^{-4}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
+| $`R\le\varepsilon`$, every $`a \gt 0`$ | $`d\ge8/(a\varepsilon^2)`$ | $`a^{-2}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
+| $`R\le1/(2d)+\varepsilon`$, $`0 \lt \eta=1-a\le1/4`$, $`\varepsilon\le\eta^2`$ | $`d\ge16\eta^2/(a^2\varepsilon^2)`$ | $`\eta^2a^{-4}\varepsilon^{-3}\log^2(1/\varepsilon)`$ |
 | $`R\le1/(2d)+\eta^2/(2a^2)+\delta`$, $`\eta\le1/4`$ | Every $`d\ge2`$ | $`\delta^{-1}\log^2(1/\delta)`$ |
 
 These are constructive sufficient bounds. At fixed risk and clean fraction they have no dimension dependence in their number of samples. When the requested excess error is of order $`\eta/\sqrt d`$, the fine-precision bound may instead require order $`d^{3/2}`$ samples, up to contamination factors and logarithms. It must not be described as a dimension-independent high-precision algorithm.

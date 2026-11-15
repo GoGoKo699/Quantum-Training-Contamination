@@ -28,10 +28,10 @@ These sections supply foundations. The exact contamination reduction and asympto
 | Watrous notation or convention | Notation here |
 |---|---|
 | A unit column vector $`u`$ and its matrix $`uu^*`$ | $`|\psi\rangle`$ and $`P=|\psi\rangle\langle\psi|`$ |
-| $`\mathrm D(\mathcal X)`$, $`\operatorname{Pos}(\mathcal X)`$, identity $`1_{\mathcal X}`$ | Density operators, positive semidefinite operators, and $`I_d`$ on $`\mathbb C^d`$ |
+| $`\mathrm D(\mathcal X)`$, $`\mathrm{Pos}(\mathcal X)`$, identity $`1_{\mathcal X}`$ | Density operators, positive semidefinite operators, and $`I_d`$ on $`\mathbb C^d`$ |
 | A measurement $`\mu`$ with outcomes zero and one | $`\mu(1)=E`$, $`\mu(0)=I-E`$; $`E`$ means predict the clean class |
-| Hilbert–Schmidt pairing $`\langle A,B\rangle=\operatorname{Tr}(A^*B)`$ | For effects and states, $`\operatorname{Tr}(E\rho)`$ is an acceptance probability |
-| Root fidelity $`F(\rho,\tau)=\|\sqrt\rho\sqrt\tau\|_1`$ (§3.2) | Reconstruction overlap $`\operatorname{Tr}(P\widehat\tau)`$ equals $`F(P,\widehat\tau)^2`$ |
+| Hilbert–Schmidt pairing $`\langle A,B\rangle=\mathrm{Tr}(A^*B)`$ | For effects and states, $`\mathrm{Tr}(E\rho)`$ is an acceptance probability |
+| Root fidelity $`F(\rho,\tau)=\|\sqrt\rho\sqrt\tau\|_1`$ (§3.2) | Reconstruction overlap $`\mathrm{Tr}(P\widehat\tau)`$ equals $`F(P,\widehat\tau)^2`$ |
 | Completely bounded trace norm $`|||\Phi|||_1`$ | $`\|\Phi\|_\diamond`$, unhalved; a separately named normalized channel distance is half this value |
 | $`v\prec u`$ means $`u`$ majorizes $`v`$ | $`p\prec p^*(q)`$; the concentrated vector is on the majorizing side |
 
@@ -47,14 +47,14 @@ Let $`a\in(0,1]`$ be known, and let the independent training specimens have stat
 \rho=aP+(1-a)\sigma,\qquad P=|\psi\rangle\langle\psi|.
 ```
 
-The learner has no preparation description or flag telling it which part was clean. Even exact knowledge of $`\rho`$ leaves all pure $`P`$ satisfying $`aP\preceq\rho`$ possible. For $`a<1`$, the converse is immediate: $`(\rho-aP)/(1-a)`$ is a valid contaminant whenever that inequality holds.
+The learner has no preparation description or flag telling it which part was clean. Even exact knowledge of $`\rho`$ leaves all pure $`P`$ satisfying $`aP\preceq\rho`$ possible. For $`a \lt 1`$, the converse is immediate: $`(\rho-aP)/(1-a)`$ is a valid contaminant whenever that inequality holds.
 
 The book's positivity language now turns an explanation of a source into a checkable inequality. On the support of $`\rho`$, conjugation by $`\rho^{-1/2}`$ gives a rank-one operator dominated by the identity. Diagonalizing $`\rho=\sum_i\lambda_i|i\rangle\langle i|`$ and writing $`p_i=|\langle i|\psi\rangle|^2`$ yields the project's local derivation
 
 ```math
 aP\preceq\rho
 \quad\Longleftrightarrow\quad
-\sum_{\lambda_i>0}\frac{p_i}{\lambda_i}\le\frac1a,
+\sum_{\lambda_i \gt 0}\frac{p_i}{\lambda_i}\le\frac1a,
 \qquad p_i=0\ \text{when}\ \lambda_i=0.
 ```
 
@@ -65,7 +65,7 @@ An inverse on the full space was not assumed: zero eigenvalues exclude clean com
 One later test is either the clean $`P`$ or $`I/d`$, with equal priors. The binary effect $`E`$ therefore has risk
 
 ```math
-R(E,P)=\frac{1-\operatorname{Tr}(EP)+\operatorname{Tr}(E)/d}{2}.
+R(E,P)=\frac{1-\mathrm{Tr}(EP)+\mathrm{Tr}(E)/d}{2}.
 ```
 
 The first error term rejects the clean test. The second accepts background. If $`P`$ were known, accepting only its ray gives $`R_\star=1/(2d)`$. A larger accepted subspace can hedge uncertainty, but its dimension increases the background cost. This explicit cost is why state reconstruction and prediction can have very different robustness.
@@ -79,7 +79,7 @@ An optimal robust effect may thus be diagonal with entries $`e_i\in[0,1]`$. Its 
 ```math
 \max_e\min_{p\in K_\lambda}\sum_i e_i(p_i-1/d)
 =\min_{p\in K_\lambda}\sum_i(p_i-1/d)_+
-=\min_{p\in K_\lambda}\operatorname{TV}(p,u_d).
+=\min_{p\in K_\lambda}\mathrm{TV}(p,u_d).
 ```
 
 Here $`u_d`$ is uniform. After $`p`$ is fixed, the maximizing effect accepts its positive excess coordinates. The minimax equality is what permits using this choice to evaluate a learner that must commit before knowing the target. It is not an illicit assumption that the learner already knows $`p`$.
@@ -100,12 +100,12 @@ Zero coordinates are handled on the support. This produces the exact operational
 ```math
 1-2R_\infty(d,a)
 =\min_{p:\,(\sum_i\sqrt{p_i})^2\le1/a}
-\operatorname{TV}(p,u_d).
+\mathrm{TV}(p,u_d).
 ```
 
 The square-root sum can be written as a Rényi-entropy constraint, but introducing entropy has not supplied a new data-access assumption. It has expressed the set of compatible quantum explanations as a classical optimization.
 
-At fixed $`q=1-\operatorname{TV}(p,u_d)-1/d`$, Rioul's established sharp boundary is attained by $`p^*(q)`$: one leading coordinate $`1-q`$, as many $`1/d`$ coordinates as fit, one remainder, and zeros. Watrous's majorization convention explains why concentration lowers the square-root sum. The exact extremal and its provenance are given in [the proof](../science/precision_floor.md#evaluating-the-inherited-entropy-frontier) and [related work](../references/related_work.md#rioul2023). This research ingredient is beyond the textbook's foundational map.
+At fixed $`q=1-\mathrm{TV}(p,u_d)-1/d`$, Rioul's established sharp boundary is attained by $`p^*(q)`$: one leading coordinate $`1-q`$, as many $`1/d`$ coordinates as fit, one remainder, and zeros. Watrous's majorization convention explains why concentration lowers the square-root sum. The exact extremal and its provenance are given in [the proof](../science/precision_floor.md#evaluating-the-inherited-entropy-frontier) and [related work](../references/related_work.md#rioul2023). This research ingredient is beyond the textbook's foundational map.
 
 ### 5. A finite Fourier family makes the lower bound physical
 
@@ -114,12 +114,12 @@ For the extremal $`p`$, choose $`\rho`$ with eigenvalues proportional to $`\sqrt
 ```math
 |\psi_\ell\rangle
 =\sum_{j=0}^{s-1}\sqrt{p_j}\,e^{2\pi i\ell j/s}|j\rangle,
-\qquad 0\le\ell<s.
+\qquad 0\le\ell \lt s.
 ```
 
 Every target has a valid contaminant and produces this same $`\rho`$. Averaging the $`s`$ targets cancels off-diagonal entries. Thus the training systems reveal no target index, and ordinary binary discrimination of the averaged target against $`I/d`$ gives the bound already found by minimax. The issue is an indistinguishable source family, so allowing a collective measurement on arbitrarily many training copies cannot remove it.
 
-The [commuting comparison](../science/commuting_comparison.md) identifies the escaped ambiguity: if $`[\sigma,P]=0`$, the clean vector must lie in an eigenspace with eigenvalue at least $`a`$. Accepting those eigenspaces costs only their dimension divided by $`d`$. Their dimension is at most $`\min\{d,\lfloor1/a\rfloor\}`$. For $`a>1/2`$, this recovers the oracle limit, whereas unrestricted contamination still has a positive excess whenever $`a<1`$.
+The [commuting comparison](../science/commuting_comparison.md) identifies the escaped ambiguity: if $`[\sigma,P]=0`$, the clean vector must lie in an eigenspace with eigenvalue at least $`a`$. Accepting those eigenspaces costs only their dimension divided by $`d`$. Their dimension is at most $`\min\{d,\lfloor1/a\rfloor\}`$. For $`a \gt 1/2`$, this recovers the oracle limit, whereas unrestricted contamination still has a positive excess whenever $`a \lt 1`$.
 
 ## From an information limit to a finite experiment
 
