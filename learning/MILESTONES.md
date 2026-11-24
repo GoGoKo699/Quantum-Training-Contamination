@@ -1,6 +1,6 @@
 # Thirty milestones for understanding contaminated quantum training
 
-This common map follows the project’s scientific story. The selected educational anchor is John Watrous, *The Theory of Quantum Information* (2018); [the source bridge](WATROUS_BRIDGE.md) identifies the relevant sections, notation and the steps supplied by this project. The [tutorial](TUTORIAL.md) follows this settled map. The canonical scientific statements remain in the six linked `science/` chapters.
+The educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [source bridge](WATROUS_BRIDGE.md) identifies the relevant sections and notation. The [tutorial](TUTORIAL.md) develops a complete pure-source instance. The later milestones connect it to balanced flat-rank training.
 
 The allocation is **twelve background/preliminaries milestones and eighteen narrative/innovation milestones**. The background joins the state, decision, convex-geometric and circuit objects needed to formulate one complete experiment. The narrative then joins the compatibility reduction and exact precision law to its physical witnesses, constructive decision and full resource comparison. The extra narrative space reflects the project’s two distinct endpoints: an optimal limiting error and explicit sufficient finite-copy budgets. Within each phase the route progresses from local objects to the integrated account. Specialist calculations remain in the canonical scientific chapters.
 
@@ -224,7 +224,7 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 - **Understanding target:** Explain the common-density construction for two pure states using $`(P+Q+|P-Q|)/2`$ and the resulting trace-distance reconstruction lower bound. Contrast that fixed ambiguity with the decreasing recognition error against $`I_d/d`$.
 - **Dependencies and story role:** M06, M19, M22, M23; this integrates the information-limit part of the narrative into its physical meaning.
 - **Conceptual connection:** Prediction can tolerate accepting extra directions when its background is diffuse. The conclusion concerns this recognition task, not arbitrary backgrounds, state recovery or a reusable learned model.
-- **Source pointers:** Watrous §3.1.1 for trace-distance decision geometry; [precision floor: recognition versus reconstruction](../science/precision_floor.md#recognition-does-not-require-reconstructing-the-clean-state); [interpretation](../science/interpretation.md).
+- **Source pointers:** Watrous §3.1.1 for trace-distance decision geometry; [precision floor: recognition versus reconstruction](../science/precision_floor.md#recognition-does-not-require-reconstructing-the-clean-state); [flat-rank compatibility](../science/flat_rank_training.md#common-specimens-and-the-recognition-converse); [interpretation](../science/interpretation.md).
 
 ### M25 — A spectral decision with controlled missed mass
 
@@ -248,10 +248,10 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** Which allowed circuit implements the controlled evolution, and how are its simulation errors charged?
-- **Understanding target:** Reconstruct the first-order controlled-partial-swap identity, its reference-stable remainder, the $`4T^2/n`$ hybrid bound and the allocation over phase-estimation segments. Explain why each step consumes an unused independent stored copy but needs no controlled unknown-source oracle.
+- **Understanding target:** Reconstruct the controlled partial-swap identity, its reference-stable remainder and the $`4T^2/n`$ hybrid bound. Apply the bound to phase-estimation segments for a pure source and to a single Hadamard test for a balanced support.
 - **Dependencies and story role:** M10, M11, M26; this closes the access and error-budget gap between the formal filter and a supplied-copy algorithm.
 - **Conceptual connection:** Known-gate control and sample-based simulation produce the measurement channel with an explicit diamond-error account; correlations among test and work registers are already included.
-- **Source pointers:** Watrous §3.3.2, Definition 3.43 and Proposition 3.48; [finite-copy decision: controlled simulation](../science/finite_copy.md#controlled-density-matrix-simulation-from-copies); [resources: finite known-gate circuit](../science/resources.md#a-finite-circuit-over-known-gates).
+- **Source pointers:** Watrous §3.3.2, Definition 3.43 and Proposition 3.48; [finite-copy decision: controlled simulation](../science/finite_copy.md#controlled-density-matrix-simulation-from-copies); [balanced-rank Hadamard test](../science/flat_rank_training.md#coherent-construction-with-finite-copies).
 
 ### M28 — Which finite-copy bound applies at the requested precision
 
@@ -266,16 +266,16 @@ Watrous supplies the foundations. Rioul’s sharp scalar Rényi/variation fronti
 
 - **Phase:** narrative/innovation.
 - **Central question:** What remains of the quantum learning comparison after every supplied copy, stored register, known gate and output is charged?
-- **Understanding target:** Distinguish active processing width from all retained training storage, add source and test preparation to processing and synthesis, and identify the single-bit consumed-test output. Explain why the inherited clean family gives a classical-compiler lower bound for the contaminated class, while the resulting fixed-risk sample separation is not an unconditional total-runtime claim.
+- **Understanding target:** Distinguish active processing width from all retained training storage, add source and test preparation to processing and synthesis, and identify the single-bit output. Explain how the clean subfamily gives a compiler lower bound and why tomography reaches the coherent risk order at balanced rank.
 - **Dependencies and story role:** M07, M12, M27, M28; this evaluates the full implementation and its correctly matched comparator.
 - **Conceptual connection:** The scientific benefit concerns the information that survives the train–test boundary; explicit preparation and storage charges keep that statement separate from free loading or hidden quantum memory.
-- **Source pointers:** [Resources](../science/resources.md), especially [chronology](../science/resources.md#chronology-and-memory), [source preparation and output](../science/resources.md#source-preparation-and-output), and [precision/comparator scope](../science/resources.md#what-changes-with-the-demanded-precision); [related work](../references/related_work.md).
+- **Source pointers:** [Resources](../science/resources.md), [precision and comparator scope](../science/resources.md#what-changes-with-the-demanded-precision), and [measurement-first construction](../science/flat_rank_training.md#measurement-first-and-a-spectral-threshold).
 
 ### M30 — One integrated account of what contamination costs
 
 - **Phase:** narrative/innovation.
-- **Central question:** What does the project establish once its exact law, physical adversaries, commuting comparison, finite circuit and limits are stated together?
-- **Understanding target:** Explain the contribution with all its qualifiers: an exact pure-source recognition floor, a separate finite-copy construction, a task-matched compilation comparison and explicit costs. Separate textbook foundations and inherited scalar/simulation results from the operational addition, and name the unsupported extensions without treating them as solved.
-- **Dependencies and story role:** M18, M19, M20, M22, M23, M24, M28, M29; this synthesizes the narrative into a global understanding of the project.
-- **Conceptual connection:** Compatible quantum decompositions control irreducible precision, a diffuse background makes recognition easier than recovery, and the cost of approaching the floor remains distinct from the floor itself.
-- **Source pointers:** [Model](../science/model.md), [precision floor](../science/precision_floor.md), [commuting comparison](../science/commuting_comparison.md), [finite-copy decision](../science/finite_copy.md), [resources](../science/resources.md), [interpretation](../science/interpretation.md), and [attribution](../references/related_work.md); selected-anchor foundations are gathered in [the Watrous bridge](WATROUS_BRIDGE.md).
+- **Central question:** How does one source ambiguity produce different costs for pure-source recognition, balanced recognition and ordinary reflection?
+- **Understanding target:** State the exact pure-source floor and distinguish it from the balanced finite-copy law. Explain why balanced recognition is quadratic in weak contamination while the reflection error is linear and grows with batch size.
+- **Dependencies and story role:** M18, M19, M22, M23, M24, M27, M28, M29. This joins the pure-source results and the balanced comparison using their common specimen geometry.
+- **Conceptual connection:** The same training density can hide several clean sources. The output task determines which differences between those sources affect the loss.
+- **Source pointers:** [Pure-source precision floor](../science/precision_floor.md), [balanced recognition and reflection](../science/flat_rank_training.md#one-source-ambiguity-two-different-tasks), and [Watrous bridge](WATROUS_BRIDGE.md#from-a-ray-to-a-balanced-support).

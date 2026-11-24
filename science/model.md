@@ -1,5 +1,7 @@
 # Learning a clean decision from contaminated quantum specimens
 
+This chapter specifies the pure-source model. [Flat-rank recognition](flat_rank_training.md) replaces the pure class by the uniform state on an unknown rank-$`r`$ support and studies finite-copy precision at $`d=2r`$.
+
 A source repeatedly prepares a quantum state, but its training specimens contain an uncontrolled admixture. The learner is asked to recognize one later clean specimen. Reconstructing the clean state would be sufficient for that task, yet reconstruction can be impossible even with unlimited training: several nonorthogonal pure states can have the same contaminated density matrix. This account asks what that ambiguity actually costs for prediction.
 
 The background class is the known maximally mixed state. It is deliberately diffuse. A classifier can accept a small uncertainty subspace without paying a large background false-positive probability. This property makes the distinction between state identification and prediction quantitatively accessible. The exact answer is specific to this source and background; it is not a universal statement about poisoned datasets.
