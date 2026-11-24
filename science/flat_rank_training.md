@@ -16,10 +16,10 @@ The unknown density operator $`\sigma`$ is fixed within an instance and can depe
 If $`E`$ is the effect for accepting the clean class, the error and excess over the oracle are
 
 ```math
-R(E,P)=\frac{1-\operatorname{tr}(EP)/r+\operatorname{tr}(E)/(2r)}2,
+R(E,P)=\frac{1-\mathrm{Tr}(EP)/r+\mathrm{Tr}(E)/(2r)}2,
 \qquad
 R(E,P)-\frac14
-=\frac{\operatorname{tr}[P(I-E)]+\operatorname{tr}[(I-P)E]}{4r}.
+=\frac{\mathrm{Tr}[P(I-E)]+\mathrm{Tr}[(I-P)E]}{4r}.
 ```
 
 For a training protocol this effect is induced by fixing the training state, with any measurement randomness averaged. Let $`E_{\rm Q}(N;r,a)`$ and $`E_{\rm C}(N;r,a)`$ denote the minimax excess for the coherent learner and the classical compiler, respectively. For all $`N\ge1`$ and both learner classes the bounds hold with absolute constants:
@@ -51,8 +51,8 @@ Two rank-$`r`$ projectors $`P,Q`$ can yield one shared density matrix exactly wh
 where $`\theta_i(P,Q)`$ are their principal angles. To see this, write $`A=\alpha P`$, $`B=\alpha Q`$. A common training density must dominate both $`A`$ and $`B`$. For any such upper bound $`X`$, use the support projector $`\Pi`$ of $`(A-B)_+`$ to obtain
 
 ```math
-\operatorname{tr}X
-\ge \operatorname{tr}(\Pi A)+\operatorname{tr}[(I-\Pi)B]
+\mathrm{Tr}X
+\ge \mathrm{Tr}(\Pi A)+\mathrm{Tr}[(I-\Pi)B]
 =a+\frac12\lVert A-B\rVert_1.
 ```
 
@@ -79,9 +79,9 @@ U=e^{-iT\rho},\qquad T=\pi/\alpha,\qquad U_0=e^{-i\pi P}=I-2P.
 Assign the minus control outcome to the clean class. The ideal measurement effect is $`E=(I-(U+U^\dagger)/2)/2`$. The missed clean mass and the accepted background mass in the excess formula are
 
 ```math
-\operatorname{tr}[P(I-E)]=\frac{\lVert (U+I)P\rVert_F^2}{4},
+\mathrm{Tr}[P(I-E)]=\frac{\lVert (U+I)P\rVert_F^2}{4},
 \qquad
-\operatorname{tr}[(I-P)E]=\frac{\lVert (U-I)(I-P)\rVert_F^2}{4}.
+\mathrm{Tr}[(I-P)E]=\frac{\lVert (U-I)(I-P)\rVert_F^2}{4}.
 ```
 
 Together these give the exact ideal excess $`\lVert U-U_0\rVert_F^2/(16r)`$. The integral identity for the difference of two unitary evolutions and unitary invariance of the Schatten norms yield $`\lVert U-U_0\rVert_F\le\pi x`$ and $`\lVert U-U_0\rVert_1\le\pi x`$. Also $`\lVert U-U_0\rVert_\infty\le2`$, so $`\lVert U-U_0\rVert_F^2\le2\pi x`$ and $`\lVert U-U_0\rVert_F^2\le8r`$. The ideal excess is therefore at most a constant times $`\min\{x^2,x,r\}/r`$.
@@ -98,7 +98,7 @@ Apply [O’Donnell and Wright, Theorem 1.2](https://arxiv.org/html/1508.01907v2)
 \mathbb E\lVert\widehat\rho-\rho\rVert_F^2\le (4d-3)/N.
 ```
 
-Keep only the classical record and predict the clean class using the rank-$`r`$ effect $`\widehat Q`$ onto the leading eigenspace of $`\widehat\rho`$. Resolve ties by a fixed measurable rule. Write $`L=\operatorname{tr}[P(I-\widehat Q)]`$ and $`e=\lVert\widehat\rho-\rho\rVert_F`$. The excess is $`L/(2r)`$. Because $`\alpha\widehat Q`$ is a closest scaled rank-$`r`$ projector to $`\widehat\rho`$ in Frobenius norm, we have
+Keep only the classical record and predict the clean class using the rank-$`r`$ effect $`\widehat Q`$ onto the leading eigenspace of $`\widehat\rho`$. Resolve ties by a fixed measurable rule. Write $`L=\mathrm{Tr}[P(I-\widehat Q)]`$ and $`e=\lVert\widehat\rho-\rho\rVert_F`$. The excess is $`L/(2r)`$. Because $`\alpha\widehat Q`$ is a closest scaled rank-$`r`$ projector to $`\widehat\rho`$ in Frobenius norm, we have
 
 ```math
 2\alpha^2 L=\lVert\alpha(P-\widehat Q)\rVert_F^2
@@ -107,7 +107,7 @@ Keep only the classical record and predict the clean class using the rank-$`r`$ 
 L\le 4(x^2+e^2/\alpha^2).
 ```
 
-For the linear-contamination regime, the same spectral optimality gives $`\operatorname{tr}[\widehat\rho(\widehat Q-P)]\ge0`$. Since $`\lVert\widehat Q-P\rVert_\infty\le1`$, this yields
+For the linear-contamination regime, the same spectral optimality gives $`\mathrm{Tr}[\widehat\rho(\widehat Q-P)]\ge0`$. Since $`\lVert\widehat Q-P\rVert_\infty\le1`$, this yields
 
 ```math
 \alpha L\le\eta+e\sqrt{2L},
@@ -127,7 +127,7 @@ For $`x\lt1`$ let $`Q_\star`$ be the top-$`r`$ projector of the exact matrix $`\
 \le t\eta(\langle u|\sigma|u\rangle+\langle v|\sigma|v\rangle).
 ```
 
-The equality uses the single rank-one block of $`P`$ in that plane. The inequality uses positivity of the restriction of $`\sigma`$ to the plane. Since $`\sin(2\theta)\le tx\lt1`$, no principal angle continuous from zero can reach $`\pi/4`$. Summing over disjoint principal planes at $`t=1`$ gives $`\sum_i\sin(2\theta_i)\le x`$ because $`\operatorname{tr}\sigma=1`$.
+The equality uses the single rank-one block of $`P`$ in that plane. The inequality uses positivity of the restriction of $`\sigma`$ to the plane. Since $`\sin(2\theta)\le tx\lt1`$, no principal angle continuous from zero can reach $`\pi/4`$. Summing over disjoint principal planes at $`t=1`$ gives $`\sum_i\sin(2\theta_i)\le x`$ because $`\mathrm{Tr}\sigma=1`$.
 
 For $`f(z)=(1-\sqrt{1-z^2})/2`$, convexity and $`f(0)=0`$ give $`\sum_i f(z_i)\le f(\sum_i z_i)`$ when $`z_i\ge0`$ and the sum is at most one. Therefore the effect $`Q_\star`$ has excess
 
@@ -143,7 +143,7 @@ The rank-one formula in [the original precision account](precision_floor.md) tre
 
 ## Small contamination outside balanced rank
 
-For general $`1\le r\lt d`$, the clean-support oracle has risk $`r/(2d)`$. The missed support mass $`\operatorname{tr}[P(I-E)]`$ and accepted kernel mass $`\operatorname{tr}[(I-P)E]`$ enter the excess with coefficients $`(1/r-1/d)/2`$ and $`1/(2d)`$, respectively. Each coefficient is at most $`1/(2r)`$. Applying these weights to the Hadamard-test norm identities above and charging the same controlled-simulation error gives the coherent upper bound below. A rank-$`r`$ tomography effect still has excess $`L/(2r)`$, so the preceding two estimates on $`L`$ give the compiler bound. For $`a\ge1/2`$ and $`N\ge1`$, the sufficient excess orders are
+For general $`1\le r\lt d`$, the clean-support oracle has risk $`r/(2d)`$. The missed support mass $`\mathrm{Tr}[P(I-E)]`$ and accepted kernel mass $`\mathrm{Tr}[(I-P)E]`$ enter the excess with coefficients $`(1/r-1/d)/2`$ and $`1/(2d)`$, respectively. Each coefficient is at most $`1/(2r)`$. Applying these weights to the Hadamard-test norm identities above and charging the same controlled-simulation error gives the coherent upper bound below. A rank-$`r`$ tomography effect still has excess $`L/(2r)`$, so the preceding two estimates on $`L`$ give the compiler bound. For $`a\ge1/2`$ and $`N\ge1`$, the sufficient excess orders are
 
 ```math
 O\!\left(\frac{r^2}{N}+\frac{\min\{x^2,x\}}r\right)
@@ -157,7 +157,7 @@ For $`1\le r\le d/2`$ and $`0\le x\le\sqrt{r/d}`$, both orders are matched. Use 
 
 ## A four-dimensional instance
 
-Take $`d=4`$, $`r=2`$, $`a=2/3`$, and $`\rho=\operatorname{diag}(3/8,3/8,1/8,1/8)`$. This instance has $`x=1`$. For an isometry $`V`$ with $`P=VV^\dagger`$, the condition $`P/3\preceq\rho`$ is equivalent to $`V^\dagger\rho^{-1}V\preceq3I`$. In the two spectral blocks this bounds each squared principal sine relative to the top two directions by $`1/16`$. Their rank-two effect consequently has risk at most $`9/32`$ for this specific $`\rho`$.
+Take $`d=4`$, $`r=2`$, $`a=2/3`$, and $`\rho=\mathrm{diag}(3/8,3/8,1/8,1/8)`$. This instance has $`x=1`$. For an isometry $`V`$ with $`P=VV^\dagger`$, the condition $`P/3\preceq\rho`$ is equivalent to $`V^\dagger\rho^{-1}V\preceq3I`$. In the two spectral blocks this bounds each squared principal sine relative to the top two directions by $`1/16`$. Their rank-two effect consequently has risk at most $`9/32`$ for this specific $`\rho`$.
 
 For equality, pair each top direction with a lower direction and take a ray with squared lower component $`1/16`$ in each plane. Vary the two lower-component signs independently. All four supports satisfy the same compatibility condition. Their average clean state has top-block eigenvalues $`15/32`$ and bottom-block eigenvalues $`1/32`$, each repeated twice. Its optimal test against $`I/4`$ has risk $`9/32`$. This is the conditional minimax value at the displayed density, where the clean-support oracle has risk $`1/4`$.
 
