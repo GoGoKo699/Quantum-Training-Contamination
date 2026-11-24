@@ -70,3 +70,7 @@ dependency and an explicit ordered-limit caption.
 The controlled-channel tests use dimensions two and three and an entangled
 two-dimensional reference. They check consequential phase conventions; the
 analytical proof supplies the diamond-norm guarantee for arbitrary references.
+
+## Checks for the sister results
+
+The [rank and contamination comparison](../science/flat_rank_training.md) uses the existing clean verification above. The [joint finite-instance suite](https://github.com/GoGoKo699/Collective-Quantum-Programming/blob/main/verification/check_contamination.py) checks the shared-density construction, the balanced recognition risk, and its contrast with reference-stable reflection programming.

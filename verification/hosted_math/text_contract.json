@@ -9,31 +9,31 @@
     },
     {
       "path": "README.md",
-      "index": 9,
+      "index": 20,
       "source_sha256": "b5a577f375c643f46d9d4a12dce42ab16e4c7df947a45727bb1f4aa0350d7271",
       "expected_text": "\n  1\n  \n    /\n  \n  d\n  <\n  a\n  ≤\n  1\n"
     },
     {
       "path": "README.md",
-      "index": 12,
+      "index": 23,
       "source_sha256": "9db505ccbe9bb2cc494fe0df582cef0fa07c378888daf70ce790b651476867a2",
       "expected_text": "\n  \n    1\n    −\n    q\n  \n  +\n  \n    \n      ⌊\n      d\n      q\n      ⌋\n    \n    \n      d\n    \n  \n  +\n  \n    q\n    −\n    \n      \n        ⌊\n        d\n        q\n        ⌋\n      \n      d\n    \n  \n  =\n  \n    a\n    \n      −\n      1\n      \n        /\n      \n      2\n    \n  \n  .\n"
     },
     {
       "path": "README.md",
-      "index": 13,
+      "index": 24,
       "source_sha256": "ace6b979faa623a7f5b5c0700c884051ea8f6c64de270ff5587d38a2aa9afcec",
       "expected_text": "\n  \n    R\n    ∞\n  \n  (\n  d\n  ,\n  a\n  )\n  =\n  \n    \n      1\n      \n        /\n      \n      d\n      +\n      \n        q\n        d\n      \n      (\n      a\n      )\n    \n    2\n  \n  .\n"
     },
     {
       "path": "README.md",
-      "index": 16,
+      "index": 27,
       "source_sha256": "842aba38c579babd186f86b27cc28110213bfaf2da890c6dc566a7f9534661f6",
       "expected_text": "\n  0\n  <\n  η\n  ≤\n  1\n  \n    /\n  \n  4\n"
     },
     {
       "path": "README.md",
-      "index": 22,
+      "index": 33,
       "source_sha256": "4a452fa6c9f7311c7ab6ac5917df8b22533f87fe4ae7c801607d3ee927b324d2",
       "expected_text": "\n  a\n  >\n  1\n  \n    /\n  \n  2\n"
     },
@@ -699,67 +699,67 @@
     },
     {
       "path": "science/model.md",
-      "index": 4,
+      "index": 6,
       "source_sha256": "5e4e1add7b7c396cb72b03dc9ac8ef0ee439a7b2b373eae5878bd77aad76c96a",
       "expected_text": "\n  P\n  =\n  |\n  ψ\n  ⟩\n  ⟨\n  ψ\n  |\n  ,\n  \n    \n  \n  ρ\n  =\n  a\n  P\n  +\n  (\n  1\n  −\n  a\n  )\n  σ\n  ,\n"
     },
     {
       "path": "science/model.md",
-      "index": 12,
+      "index": 14,
       "source_sha256": "93ea5911b832654f7013bf9d550820a3ab11bc1c7482dcba6568a2bccdcadeda",
       "expected_text": "\n  H\n  =\n  1\n  :\n   \n  P\n  ,\n  \n    \n  \n  H\n  =\n  0\n  :\n   \n  \n    τ\n    d\n  \n  :=\n  \n    I\n    d\n  \n  \n    /\n  \n  d\n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 18,
+      "index": 20,
       "source_sha256": "6d05e5c4ea8561321760afa08d48dfe1094ea199d2c8d857f7d54a45552f8574",
       "expected_text": "\n  \n    R\n    N\n  \n  (\n  T\n  ;\n  P\n  ,\n  σ\n  )\n  =\n  \n    1\n    2\n  \n  \n    Tr\n  \n  [\n  (\n  I\n  −\n  T\n  )\n  (\n  \n    ρ\n    \n      ⊗\n      N\n    \n  \n  ⊗\n  P\n  )\n  ]\n  +\n  \n    1\n    2\n  \n  \n    Tr\n  \n  [\n  T\n  (\n  \n    ρ\n    \n      ⊗\n      N\n    \n  \n  ⊗\n  \n    τ\n    d\n  \n  )\n  ]\n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 19,
+      "index": 21,
       "source_sha256": "95f17bad6baad8b01d0d63a69a19364271a9169d64343371147a7463d5c03586",
       "expected_text": "\n  \n    R\n    N\n    \n      \n        Q\n      \n    \n  \n  (\n  d\n  ,\n  a\n  )\n  =\n  \n    inf\n    T\n  \n  \n    sup\n    \n      P\n       \n      \n        pure\n      \n      ,\n       \n      σ\n       \n      \n        state\n      \n    \n  \n  \n    R\n    N\n  \n  (\n  T\n  ;\n  P\n  ,\n  σ\n  )\n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 22,
+      "index": 24,
       "source_sha256": "9f39ff6f699202b937fe4d2c10b9374e3552c29980a2ff14dee1363f97be4a33",
       "expected_text": "\n  \n    T\n    \n      \n        C\n      \n    \n  \n  =\n  ∫\n  F\n  (\n  d\n  y\n  )\n  ⊗\n  \n    E\n    y\n  \n  ,\n  \n    \n  \n  0\n  ⪯\n  \n    E\n    y\n  \n  ⪯\n  I\n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 23,
+      "index": 25,
       "source_sha256": "802b2c50a56d4b4a47981beefbedc5aaafedb4a0687caeba9bccff9ac73e554e",
       "expected_text": "\n  \n    R\n    N\n    \n      \n        C\n      \n    \n  \n  (\n  d\n  ,\n  a\n  )\n"
     },
     {
       "path": "science/model.md",
-      "index": 26,
+      "index": 28,
       "source_sha256": "9655af93aa574695958e0bad60357608b7e541fe0833efe2ebf89ccab0c39784",
       "expected_text": "\n  \n    R\n    ⋆\n  \n  (\n  d\n  )\n  =\n  \n    1\n    \n      2\n      d\n    \n  \n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 29,
+      "index": 31,
       "source_sha256": "b980357792ccba5f9ae88c3fa956664b1b86c82391f0630141042b6e604cf3be",
       "expected_text": "\n  \n    \n      P\n    \n    a\n  \n  (\n  ρ\n  )\n  =\n  {\n  P\n   pure\n  :\n  a\n  P\n  ⪯\n  ρ\n  }\n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 30,
+      "index": 32,
       "source_sha256": "193d2ca3d1c58a1a3b33aa43d1832c463a728baad4bd744e50383ecd1b244868",
       "expected_text": "\n  \n    R\n    ∞\n  \n  (\n  d\n  ,\n  a\n  )\n  =\n  \n    sup\n    \n      ρ\n      :\n      \n        \n          P\n        \n        a\n      \n      (\n      ρ\n      )\n      ≠\n      ∅\n    \n  \n  \n    inf\n    \n      0\n      ⪯\n      E\n      ⪯\n      I\n    \n  \n  \n    sup\n    \n      P\n      ∈\n      \n        \n          P\n        \n        a\n      \n      (\n      ρ\n      )\n    \n  \n  \n    \n      1\n      −\n      \n        Tr\n      \n      (\n      E\n      P\n      )\n      +\n      \n        Tr\n      \n      (\n      E\n      )\n      \n        /\n      \n      d\n    \n    2\n  \n  .\n"
     },
     {
       "path": "science/model.md",
-      "index": 31,
+      "index": 33,
       "source_sha256": "01ef2516cdf171668ef99e9a9e81d4b97e4d2ed086c08263adf3316b313e1e85",
       "expected_text": "\n  \n    lim\n    \n      N\n      →\n      ∞\n    \n  \n  \n    R\n    N\n    \n      \n        Q\n      \n    \n  \n  (\n  d\n  ,\n  a\n  )\n  =\n  \n    lim\n    \n      N\n      →\n      ∞\n    \n  \n  \n    R\n    N\n    \n      \n        C\n      \n    \n  \n  (\n  d\n  ,\n  a\n  )\n  =\n  \n    R\n    ∞\n  \n  (\n  d\n  ,\n  a\n  )\n"
     },
     {
       "path": "science/model.md",
-      "index": 35,
+      "index": 37,
       "source_sha256": "842aba38c579babd186f86b27cc28110213bfaf2da890c6dc566a7f9534661f6",
       "expected_text": "\n  0\n  <\n  η\n  ≤\n  1\n  \n    /\n  \n  4\n"
     },

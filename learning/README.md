@@ -13,6 +13,7 @@ The single educational anchor is **John Watrous, *The Theory of Quantum Informat
 | Follow the exact information limit and its source ambiguity | [Precision floor](../science/precision_floor.md) |
 | Isolate what noncommuting contamination changes | [Commuting comparison](../science/commuting_comparison.md) |
 | Connect the theorem to stored specimens and known gates | [Finite-copy construction](../science/finite_copy.md) and [resources](../science/resources.md) |
+| Compare finite-copy recognition and reflection on flat supports | [Balanced-rank recognition](../science/flat_rank_training.md) and [its connection to programming](../science/flat_rank_training.md#one-source-ambiguity-two-different-tasks) |
 | Separate textbook foundations from inherited research ingredients | [Related work](../references/related_work.md) |
 
-The map belongs to the project and is common to every reader. The tutorial is an explanatory route through the experiment; the canonical scientific pages own the proofs. Exact limiting risk, finite-copy upper bounds, and resource comparisons retain their separate accuracy conventions and orders of limits throughout.
+The tutorial develops the pure-source experiment. The milestone map extends that route to balanced-rank recognition, including the matched finite-copy rates and the distinction between recognition error and reflection error.

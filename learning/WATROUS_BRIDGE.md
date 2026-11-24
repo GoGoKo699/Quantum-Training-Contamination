@@ -131,4 +131,12 @@ Composition in the completely bounded trace norm makes the error allocation vali
 
 Finally, [the resource account](../science/resources.md) charges preparation, every stored training system, known gates, and the one consumed test. The clean subfamily supplies the inherited classical-compilation lower bound. The dimension-independent quantum copy statement fixes the target risk and clean fraction before growing $`d`$; substituting a dimension-dependent precision can change the comparison. Likewise, the exact information limit takes $`N\to\infty`$ first at fixed $`d,a`$. These are different conclusions, and neither is an optimal joint finite-copy law or a hardware-noise guarantee.
 
-Continue with the [tutorial](TUTORIAL.md) for a complete qubit instance, or use [the milestone map](MILESTONES.md) to connect these steps to the full proofs. Research citations remain in [related work](../references/related_work.md); Watrous remains the only educational anchor.
+## From a ray to a balanced support
+
+Use Watrous §§1.1.2–1.1.3 for positive order and Schatten norms, §2.3.1 for binary effects, and §3.1.1 for the discrimination problem given two equally weighted compatible clean supports. The [flat-rank proof](../science/flat_rank_training.md#common-specimens-and-the-recognition-converse) evaluates the trace difference through principal angles. At $`d=2r`$, each two-dimensional angle block contributes a quadratic term to the recognition excess for nearby supports.
+
+The coherent learner uses the known controlled swaps above in a Hadamard test with evolution time $`\pi r/a`$. Watrous §3.3.2 converts the controlled-simulation error into a prediction guarantee on the later test. The measurement-first compiler uses collective tomography followed by the leading rank-$`r`$ projector. The [two constructions](../science/flat_rank_training.md#coherent-construction-with-finite-copies) reach the same risk order, while the [exact-density argument](../science/flat_rank_training.md#exact-limit-below-the-population-of-one-support-direction) determines the high-purity limit.
+
+The same compatible pair can separate ordinary reflection channels by a larger amount. Watrous §3.3.3 provides the reference-assisted channel discrimination language. The [programming account](https://github.com/GoGoKo699/Collective-Quantum-Programming/blob/main/science/contaminated_reflections.md) supplies the batch analysis and uses an unhalved diamond norm.
+
+Continue with the [tutorial](TUTORIAL.md) for a complete qubit instance, or use [the milestone map](MILESTONES.md) to connect these steps to the full proofs. Research citations remain in [related work](../references/related_work.md).

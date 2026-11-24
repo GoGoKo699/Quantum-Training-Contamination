@@ -8,6 +8,7 @@ Authoritative routes:
 - science/precision_floor.md: exact finite-d asymptotic minimax law, compatibility reduction, inherited Renyi/TV extremal, finite phase adversary, fixed-d infinite-training attainability, uniform small-contamination law, fixed-a dimension expansion, reconstruction lower bounds.
 - science/commuting_comparison.md: same quantum experiment with [sigma,P]=0; exact risk min(d,floor(1/a))/(2d), unknown eigenbasis allowed, and classical point-target specialization.
 - science/finite_copy.md: F1 gap-free QPE decision and explicit copy allocation, reference-stable controlled partial-SWAP simulation, F2 fixed-risk construction, F3 contamination-sensitive sufficient precision bounds.
+- science/flat_rank_training.md: balanced dimension d=2r, contaminated flat source aP/r+(1-a)sigma, matching coherent and measurement-first minimax excess orders, exact limit at x=r(1-a)/a<1, and link to the reflection-channel consequence.
 - science/resources.md: N log2(d) offline sample storage, active versus total width, finite gate synthesis, source preparation NG_rho, one consumed test and classical output, inherited clean compiler comparator.
 - science/interpretation.md: prediction versus reconstruction, absolute versus relative oracle accuracy, noncommuting ambiguity, fixed-precision sample gap and restrictions.
 - references/related_work.md and references/references.bib: inherited ingredients and theorem-level model comparisons.
@@ -18,7 +19,7 @@ Authoritative routes:
 - verification/README.md and verification/run_all.py: actual numerical checks, reproduction, environment and limits.
 
 Preserve these distinctions:
-- The clean target P is pure; sigma may be arbitrary and noncommuting. Pure-source inverse compatibility cannot be transferred to an arbitrary mixed clean state.
+- The original model has a pure clean target. The balanced extension has target P/r, rank r, and d=2r. Both allow arbitrary noncommuting sigma. The exact pure-source scalar compatibility proof uses rank one.
 - The source is IID and contamination affects training only. Gates/storage and the later test are ideal under the stated model.
 - All N training copies arrive before the test. Active two-register processing does not remove N-register offline storage.
 - The output is one label for one consumed test; no reusable trained model or source calls after test arrival are supplied.
@@ -26,7 +27,7 @@ Preserve these distinctions:
 - Risk includes the oracle error1/(2d); excess subtracts it. Vanishing absolute excess does not imply relative oracle accuracy.
 - Rioul supplies the exact scalar entropy/TV extremal. Ensemble ambiguity, minimax, DME and clean memory advantages are inherited.
 - Watrous is the only educational anchor. Primary research references supply attributed ingredients beyond the textbook; the learning pages do not replace the canonical science or relax its assumptions.
-- F1-F3 are achievable finite-copy bounds with explicit error charges. They do not prove optimal classification sample complexity near the information floor.
+- F1-F3 are pure-source achievable finite-copy bounds with explicit error charges. The separate balanced flat-rank model has a matched finite-copy minimax order for both learner classes.
 - The comparator may measure training collectively and retain unlimited classical information; its restriction is source-dependent quantum information across the train-test boundary.
 - A native-copy separation is not a generic speedup for classical data or an unconditional hardware runtime claim. Every source preparation remains charged.
 - Numerical checks test finite instances and circuit identities. Written proofs establish universal statements; neither tests nor this repository certify priority or external peer review.

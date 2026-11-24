@@ -12,6 +12,18 @@ where the hidden contaminant $`\sigma`$ is arbitrary. All training specimens arr
 
 Different clean states can produce exactly the same training density matrix. This repository computes what that ambiguity costs for prediction, compares commuting and noncommuting contamination, and constructs finite-copy coherent decisions with their costs included.
 
+## Related projects on flat-rank training
+
+[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits) supplies the clean flat-rank accuracy converse. [Collective Quantum Programming](https://github.com/GoGoKo699/Collective-Quantum-Programming) uses contaminated specimens to program an ordinary reflection. A rotation between compatible clean supports changes the reflection channel to first order, whereas its balanced recognition cost is quadratic for weak contamination.
+
+For [flat-rank recognition](science/flat_rank_training.md), the clean class is $`P/r`$, the dimension is $`d=2r`$, and training has state $`\rho=aP/r+(1-a)\sigma`$. With $`x=r(1-a)/a`$ and $`N\ge1`$, both coherent retention and measurement-first compilation have the same minimax excess risk order:
+
+```math
+\Theta\!\left(\min\left\{1,\frac{r^2}{N}+\frac{\min\{x^2,x,r\}}r\right\}\right).
+```
+
+At fixed $`r,a`$ with $`x\lt1`$, their exact excess over the oracle tends to $`(1-\sqrt{1-x^2})/(4r)`$. The [reflection account](https://github.com/GoGoKo699/Collective-Quantum-Programming/blob/main/science/contaminated_reflections.md) gives a separate contamination floor of order $`\min\{1,kx\}`$ in unhalved diamond norm for a batch of $`k`$ targets.
+
 ## The exact prediction limit
 
 Write $`\eta=1-a`$. The known-clean-state optimum is $`R_\star=1/(2d)`$. For $`1/d \lt a\le1`$, define $`q_d(a)`$ as the unique root on $`[0,1-1/d]`$ of
@@ -37,17 +49,17 @@ If $`a\le1/d`$, it is $`1/2`$. The limit is taken with dimension and clean fract
 | Explicit finite-copy decisions | A gap-free spectral filter gives sufficient copy budgets, with controlled simulation and synthesis error included. | [F1–F3 and proofs](science/finite_copy.md) |
 | Complete resource charges | Source preparation, all offline samples, total and active width, known gates and the single output are counted. | [Resource account](science/resources.md) |
 
-Vanishing absolute excess does not imply matching the oracle's relative accuracy: at fixed contamination, the oracle error is order $`d^{-1}`$ and the contaminated limit is order $`d^{-1/2}`$. Optimal joint finite-sample precision rates are not asserted.
+At fixed contamination the pure-source oracle error is of order $`d^{-1}`$, while the contaminated limit is of order $`d^{-1/2}`$. The pure-source constructions give achievable finite-copy guarantees in general dimension.
 
 ## Read the connected scientific account
 
-Start with the [model and information access](science/model.md), then follow the [exact precision proof](science/precision_floor.md) and [commuting comparison](science/commuting_comparison.md). The [finite-copy construction](science/finite_copy.md) implements a decision using retained training specimens; [resources](science/resources.md) states what it costs. The [interpretation](science/interpretation.md) joins the results and explains their limitations. [llms.txt](llms.txt) maps the authoritative statements for automated readers.
+Start with the [pure-source model](science/model.md), then follow the [exact precision proof](science/precision_floor.md) and [commuting comparison](science/commuting_comparison.md). The [finite-copy construction](science/finite_copy.md) implements a decision using retained training specimens, with explicit [resource charges](science/resources.md). The [flat-rank proof](science/flat_rank_training.md) develops the balanced finite-copy law and the distinct coherent and measurement-first constructions. [llms.txt](llms.txt) maps the authoritative statements for automated readers.
 
 The exact scalar Rényi-entropy/variation extremal is inherited from Rioul. Ensemble nonuniqueness, minimax theory, sample-based Hamiltonian simulation and clean quantum-reference advantages are established ingredients. The contribution here is their operational connection to the solved contaminated-training prediction limit and its noncommuting-source consequence. [Related work](references/related_work.md) and [bibliography](references/references.bib) identify the dependencies and nearby tasks.
 
 ## Learn the project
 
-The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**, using the author's standard-layout manuscript. The learning route connects selected textbook foundations to the exact prediction limit and the separate achievable finite-copy bounds.
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**, using the author's standard-layout manuscript. The learning route connects selected textbook foundations to the pure-source results and the balanced flat-rank extension.
 
 | To understand | Read |
 |---|---|
@@ -69,7 +81,7 @@ The [verification guide](verification/README.md) explains independent compatible
 
 ## Scope
 
-The result concerns native unknown quantum specimens, a pure clean target, IID state-level training contamination, one clean test against a known maximally mixed background, ideal processing, and one consumed prediction. It supplies neither QRAM nor inverse preparation. All training copies are retained before test arrival; small active width does not eliminate that storage cost. The fixed-accuracy sample comparison is against arbitrary collective training measurements that retain only a classical record before the test. A generic classical-data speedup, physical-noise robustness, reusable model, arbitrary-background theorem and optimal high-precision finite-copy cost are not claimed.
+Both models use native unknown quantum specimens, IID contamination confined to training, ideal processing, and one consumed prediction against a maximally mixed background. All training copies arrive before the test. The coherent constructions store those copies, with active width and total storage charged separately. The compiler may measure the training systems collectively and retain an unrestricted classical record.
 
 ## Purpose and contact
 
