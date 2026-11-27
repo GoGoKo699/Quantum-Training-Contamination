@@ -1,8 +1,24 @@
 # From contaminated specimens to one reliable decision
 
+A finite learner can store contaminated quantum examples, interact them with one later test through known gates, and return a classification bit. The operations are controlled swaps, phase rotations, Fourier transforms, measurements and classical comparisons. The training specimens supply the information about the unknown source.
+
 A source can hide which pure state it meant to prepare without making every later prediction useless. The distinction becomes visible when the task is to recognize one clean specimen against a known, diffuse background. This tutorial follows one qubit example from its density matrices to the exact decision limit, then explains what changes in large dimension and how retained training specimens implement a finite decision circuit.
 
 The [30-milestone map](MILESTONES.md) supplies the dependencies and scientific reading route. The selected educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [Watrous bridge](WATROUS_BRIDGE.md) identifies the relevant definitions, theorems and source locators; the project-specific arguments live in the linked science chapters.
+
+## Start with the circuit
+
+The [learner circuit guide](../science/learner_circuit.md) follows the registers and gates in detail. This preview gives the sequence before the derivation:
+
+1. **Retain the training specimens.** All $`N`$ independent copies of the contaminated state arrive before the test. The learner keeps these physical registers.
+2. **Receive one test register.** With equal prior probabilities, it contains the clean target or the known maximally mixed background. The learner receives one test, even though several estimation rounds follow.
+3. **Use the copies to control the test's evolution.** Known controlled partial swaps couple the test to one retained specimen at a time. Each used specimen is discarded. The gate settings are computed from the chosen accuracy parameters.
+4. **Measure spectral estimates.** Hadamards, the simulated controlled evolutions and an inverse Fourier transform produce a phase-register outcome. Repeat on the same test with unused specimens from the retained batch and reset phase workspace, recording each estimate classically.
+5. **Return one label.** Unwrap and clip the estimates as specified in the guide, take their median, and accept when it exceeds the chosen threshold.
+
+For an appropriately chosen cutoff, the contamination promise places most of the clean target's weight in sufficiently large eigenvalues of the training state. The maximally mixed background spreads its weight over every direction. The circuit exploits this difference without first finding an eigenbasis in classical form. [Building a finite decision](#building-a-finite-decision-from-retained-specimens) explains the cutoff and its error budget after the source ambiguity is understood.
+
+Two kinds of guarantee appear along the route. The qubit example below gives the **exact limiting decision error** when the training density matrix is known perfectly. The finite learner uses only stored specimens and has its own **sufficient copy and gate budgets**. The example makes the decision understandable; the finite construction explains how unknown quantum data can implement it.
 
 ## The three objects in the experiment
 
@@ -96,6 +112,8 @@ For the qubit training state above, choose the effect $`E=|0\rangle\langle0|`$. 
 | Robust effect $`E=\vert 0\rangle\langle0\vert `$ | $`q`$ | $`1/2`$ | $`1/4+q/2\approx0.2515480025`$ |
 
 The distinction between risk and excess risk is visible here. The total robust error is about $`0.251548`$; the contamination excess above the oracle is about $`0.001548`$. The example attains the exact worst-case perfect-training risk at these parameters, as the general law below shows.
+
+For this displayed diagonal matrix, measuring the test in the computational basis and accepting outcome zero realizes $`E=|0\rangle\langle0|`$. The tutorial has supplied that basis explicitly. A learner receiving only copies of an unknown training state does not receive this diagonalization. The finite spectral filter developed later uses the copies themselves to select the appropriate directions, including when the source basis is unknown.
 
 Coherent and classical-compilation learners differ before making this decision. A coherent learner may retain the actual training registers until the test arrives. A classical compiler may use any collective training measurement and retain an unlimited classical record, but must discard every source-dependent quantum register before the test. Its later test effect can depend on that record. Neither learner can identify the sign in this example from training alone, because their input density matrices agree. Their finite-sample costs for other admissible instances can still differ.
 
@@ -220,6 +238,8 @@ R\le\frac ta+\frac1{2dt}+\gamma+\frac\xi2.
 
 To implement the effect, the circuit performs phase estimation of $`e^{i\rho}`$ on the test and takes a median of repeated estimates. The evolution is synthesized by consuming the stored training copies through known controlled partial swaps. A one-copy step approximates the desired controlled evolution with error of order the squared step size. Adding those errors in diamond norm covers the whole test circuit, including untouched references. Control is applied to known swap gates; no controlled preparation oracle or controlled unknown unitary is supplied.
 
+The [circuit guide](../science/learner_circuit.md) turns this description into a register-by-register sequence. The [known-gate decomposition](../science/resources.md#a-finite-circuit-over-known-gates) implements each controlled partial swap with controlled register swaps and a known phase rotation. The learner reuses the test register throughout; the repeated measurements are of the phase workspace. All program specimens used by the simulated evolutions come from the retained training batch.
+
 The [finite-copy proof](../science/finite_copy.md) makes this finite: it specifies the phase-register size, the number of repetitions, the integer number of copies used in every simulated evolution, and the gate-synthesis error budget. One sufficient choice gives
 
 ```math
@@ -234,6 +254,8 @@ d\ge\frac8{a\varepsilon^2}.
 At fixed clean fraction and fixed target risk, this sample budget is independent of dimension. A clean majority is not required in that regime. The qubit decision table earlier describes the exact-density limit; it is not a claim that this sufficient large-dimension cutoff bound attains that table with a particular finite sample budget.
 
 For $`\eta\le1/4`$, a constant-gap leading-eigenvector filter is useful above an $`O(\eta^2)`$ excess scale. A lower spectral threshold handles finer precision in a sufficiently large dimension. Its sufficient copy count can grow as $`d^{3/2}`$ near the $`\eta/\sqrt d`$ floor. These upper bounds do not establish the optimal joint dependence on precision, dimension and sample number.
+
+The qubit example connects directly to the [existing constant-gap construction F3b](../science/finite_copy.md#a-coarse-precision-branch-close-to-the-clean-problem). Its eigenvalues are approximately $`0.947214`$ and $`0.052786`$. With $`t=1/4`$, they lie above $`2t`$ and below $`t`$, respectively. The finite filter therefore approximates the leading-eigenvector projector, which is $`|0\rangle\langle0|`$ for the displayed matrix. The known gates are unchanged if that matrix has an unknown rotated eigenbasis; the supplied copies carry its orientation. F3b gives a sufficient risk increment and copy budget for this approximation. It does not assert that a finite batch attains the limiting risk, approximately $`0.2515480025`$, or that its sample count is optimal.
 
 The storage and preparation charges remain concrete. All $`N`$ specimens are retained before the test, using $`N\lceil\log_2d\rceil`$ training qubits. Sequential consumption reduces active processing width, not that offline storage. If one source specimen costs $`G_\rho`$, the account includes $`NG_\rho`$, the one test, known gates, finite gate synthesis and the final output bit. This is native quantum-state access, with no free loading of a classical feature table.
 

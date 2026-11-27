@@ -2,6 +2,8 @@
 
 The exact information limit asks what remains unknown even when the training density matrix is known perfectly. This chapter gives a finite circuit that uses copies of that density matrix directly. It accepts the spectral modes that could carry appreciable weight of the clean target. No spectral-gap promise is imposed on the contaminated state.
 
+For the same construction in execution order, start with the [learner circuit](learner_circuit.md): registers, copy allocation, known gates, measured phase estimates and the final decision. This chapter supplies its error bounds and proofs.
+
 The input is $`N`$ independent copies of
 
 ```math

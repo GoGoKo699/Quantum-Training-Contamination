@@ -4,6 +4,8 @@ The learner receives physical quantum training specimens. It is not given a clas
 
 The [finite-copy construction](finite_copy.md) uses density-matrix simulation only through the training copies and known partial swaps. Its output is one classical classification bit for one clean test. The retained samples are consumed; no reusable learned model is promised.
 
+The [learner circuit](learner_circuit.md) follows those operations in execution order. The account below specifies their storage, synthesis and source costs.
+
 ## Chronology and memory
 
 All $`N`$ training copies arrive before the test. With $`n=\lceil\log_2d\rceil`$, retaining the actual input copies uses $`Nn`$ qubits. They remain stored until the test arrives and the prediction circuit consumes them. The method needs no additional source call after that arrival.
