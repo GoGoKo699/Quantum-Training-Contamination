@@ -18,6 +18,23 @@ Successful execution prints `"status": "passed"` and exits with code zero.
 Run `python3 verification/check_floor.py` separately to write the more focused
 `floor_results.json` report.
 
+## Checks along the circuit route
+
+The [learner circuit](../science/learner_circuit.md) uses the existing finite-copy construction. The circuit checks can be run on their own:
+
+```bash
+python3 verification/check_circuit.py
+```
+
+| Circuit ingredient | Existing check | What it establishes on the tested instances |
+|---|---|---|
+| Controlled interaction with one stored specimen | Exact controlled-SWAP dilation compared with the intended evolution | The first-order identity and finite quadratic error on inputs entangled with an untouched reference |
+| Positive phase-estimation evolution | Fresh-copy composition with the negative physical step sign | The intended control-relative phase and the stated finite hybrid-error bound |
+| Phase-register readout | Direct Fourier probabilities with signed-phase unwrapping and clipping | Normalization and the single-round tail bound on the tested phase grid |
+| Classical median and cutoff | Repeated-round acceptance probabilities | Rejection below the lower band edge and acceptance above the upper edge, including both endpoints |
+
+These checks exercise the controlled dilation and spectral filter. The known-gate decomposition and arbitrary-input guarantees are explained in [the resource account](../science/resources.md#a-finite-circuit-over-known-gates) and [the finite-copy proof](../science/finite_copy.md). The suite does not simulate every elementary gate of the full allocated training circuit.
+
 ## What is checked
 
 - **A separate fixed-spectrum optimization.** A linear program minimizes total

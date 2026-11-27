@@ -1191,8 +1191,8 @@
     "limits": "Finite entangled inputs check phase and reference conventions; they do not certify a diamond norm or a universal QPE tail theorem."
   },
   "documentation_checks": {
-    "markdown_pages": 15,
-    "local_links_checked": 171,
+    "markdown_pages": 17,
+    "local_links_checked": 212,
     "scope": "Local file/heading routes and balanced fences only; actual-host mathematical display is separate."
   },
   "learning_checks": {

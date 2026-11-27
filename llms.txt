@@ -1,10 +1,13 @@
 # Quantum Training Contamination
 
-Question: what prediction error remains when iid quantum training specimens are contaminated, but one later test is clean?
+Question: how does a finite circuit classify one later clean test from retained contaminated quantum training specimens, and what prediction error remains unavoidable?
+
+Implementation route: science/learner_circuit.md gives the input contract, registers, known controlled partial-SWAP gadget, positive-phase evolution, phase-register measurements, classical median and cutoff. Follow science/finite_copy.md for its achievable error bounds and science/resources.md for all stored copies, gate synthesis and source costs. The exact limiting minimax law is a separate route through science/precision_floor.md.
 
 Authoritative routes:
-- README.md: scientific proposition, result table, reading route and reproduction.
+- README.md: computational task, finite learner and sufficient guarantee, exact prediction limit, reading routes and reproduction.
 - science/model.md: input chronology, pure clean target P, rho=aP+(1-a)sigma, test P versus I/d, risk versus excess, coherent and classical-compiled learners.
+- science/learner_circuit.md: operational guide to the existing pure-source F1 circuit, with register layout, integer copy allocation, known gate sequence, phase decoding, one-bit output, resource and verification pointers.
 - science/precision_floor.md: exact finite-d asymptotic minimax law, compatibility reduction, inherited Renyi/TV extremal, finite phase adversary, fixed-d infinite-training attainability, uniform small-contamination law, fixed-a dimension expansion, reconstruction lower bounds.
 - science/commuting_comparison.md: same quantum experiment with [sigma,P]=0; exact risk min(d,floor(1/a))/(2d), unknown eigenbasis allowed, and classical point-target specialization.
 - science/finite_copy.md: F1 gap-free QPE decision and explicit copy allocation, reference-stable controlled partial-SWAP simulation, F2 fixed-risk construction, F3 contamination-sensitive sufficient precision bounds.
@@ -14,7 +17,7 @@ Authoritative routes:
 - references/related_work.md and references/references.bib: inherited ingredients and theorem-level model comparisons.
 - learning/README.md: shared learning navigation around the single anchor, Watrous, The Theory of Quantum Information (2018), author's standard-layout manuscript.
 - learning/WATROUS_BRIDGE.md: verified textbook sections/theorems/printed pages, notation and fidelity/norm conventions, and the bridge to the project-specific proofs.
-- learning/TUTORIAL.md: a complete qubit example connected to source ambiguity, the exact limiting risk, commuting contamination and finite-copy implementation.
+- learning/TUTORIAL.md: an early circuit route and a complete qubit example connected to source ambiguity, the exact limiting risk, commuting contamination and the copy-only finite implementation.
 - learning/MILESTONES.md: exactly 30 common understanding targets, with 12 background/preliminaries and 18 narrative/innovation milestones and their dependencies.
 - verification/README.md and verification/run_all.py: actual numerical checks, reproduction, environment and limits.
 
