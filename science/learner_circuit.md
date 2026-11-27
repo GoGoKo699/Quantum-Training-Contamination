@@ -84,7 +84,7 @@ Initialize $`Q`$ to $`|0\rangle`$. Apply a Hadamard to $`Q`$, a full-register SW
 Apply $`e^{-ihZ_Q}`$ conditioned on $`C=1`$, then reverse the three recording gates. The auxiliary returns to $`|0\rangle`$. In the convention $`R_z(\theta)=e^{-i\theta Z/2}`$, the middle gate is controlled-$`R_z(2h)`$. Its action on $`(C,Q)`$ is
 
 ```math
-\operatorname{diag}(1,1,e^{-ih},e^{ih}).
+\mathrm{diag}(1,1,e^{-ih},e^{ih}).
 ```
 
 Retain both phases in this controlled gate. In particular, the phase on the $`C=1,Q=0`$ branch is relative to the $`C=0`$ branch and affects the later phase measurement.

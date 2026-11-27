@@ -748,7 +748,7 @@
     {
       "path": "science/learner_circuit.md",
       "index": 65,
-      "source_sha256": "0ab5e908a47ab2372ac4195c52b603ddbc2a1d62f17f18667c45b9a155f8cb41",
+      "source_sha256": "62dfaa859ab82d6327e2d0e6a58ec1eb25217aad3effa56f540d5efe555e1d38",
       "expected_text": "\n  diag\n  (\n  1\n  ,\n  1\n  ,\n  \n    e\n    \n      −\n      i\n      h\n    \n  \n  ,\n  \n    e\n    \n      i\n      h\n    \n  \n  )\n  .\n"
     },
     {
